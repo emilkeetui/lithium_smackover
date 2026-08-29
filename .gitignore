@@ -1,0 +1,20 @@
+# Large third-party source data — not tracked here; see CLAUDE.md / notes/methods.md
+# for provenance and download links. Re-fetch rather than committing to git.
+/WBD_HUC12_CONUS_pulled10262020/
+/population_distribution/
+/cws_intake_hucs/*.xlsx
+/cws_intake_hucs/*.parquet
+/Knierim et al 2024.pdf
+
+# Regenerable pipeline intermediates and run logs (code/run_all.py rebuilds these)
+/outputs/intermediate/
+/outputs/logs/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Editor / OS
+.DS_Store
+Thumbs.db

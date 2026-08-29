@@ -1,0 +1,3020 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Katherine J. Knierim</origin>
+        <origin>Madalyn S. Blondes</origin>
+        <origin>Philip A. Freeman</origin>
+        <origin>Andrew L. Masterson</origin>
+        <origin>Bonnie McDevitt</origin>
+        <origin>Amanda S. Herzberg</origin>
+        <origin>Colin Doolan</origin>
+        <origin>Jessica Chenault</origin>
+        <origin>Aaron M. Jubb</origin>
+        <origin>Mary R. Croke</origin>
+        <pubdate>20240821</pubdate>
+        <title>Lithium observations, machine-learning predictions, and mass estimates from the Smackover Formation brines in southern Arkansas</title>
+        <geoform>raster digital data</geoform>
+        <onlink>https://doi.org/10.5066/P9QPRYZN</onlink>
+        <lworkcit>
+          <citeinfo>
+            <origin>Katherine J. Knierim</origin>
+            <origin>Madalyn S. Blondes</origin>
+            <origin>Andrew L. Masterson</origin>
+            <origin>Philip A. Freeman</origin>
+            <origin>Bonnie McDevitt</origin>
+            <origin>Amanda S. Herzberg</origin>
+            <origin>Peng Li</origin>
+            <origin>Ciara Mills</origin>
+            <origin>Colin Doolan</origin>
+            <origin>Aaron M. Jubb</origin>
+            <origin>Scott Ausbrooks</origin>
+            <origin>Jessica Chenault</origin>
+            <pubdate>20240901</pubdate>
+            <title>Evaluation of the lithium resource in the Smackover Formation brines of southern Arkansas using machine learning</title>
+            <geoform>Science Advances</geoform>
+            <onlink>10.1126/sciadv.adp8149</onlink>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Global demand for lithium, the primary component of lithium-ion batteries, greatly exceeds known supplies and this imbalance is expected to increase as the world transitions away from fossil fuel energy sources. The goal of this work was to calculate the total lithium mass in brines of the Reynolds oolite unit of the Smackover Formation in southern Arkansas using predicted lithium concentrations from a machine-learning model. This research was completed collaboratively between the U.S. Geological Survey and the Arkansas Department of Energy and Environment—Office of the State Geologist.  
+
+The Smackover Formation is a laterally extensive petroleum and brine system in the Gulf Coast region that includes locally high concentrations of bromide and lithium in southern Arkansas. This data release contains input files, Python scripts, and an R script used to prepare input files, create a random forest (RF) machine-learning model to predict lithium concentrations, and compute uncertainty in brines of the Reynolds oolite unit of the Smackover Formation in southern Arkansas. This data release also contains a Python script to calculate the total mass of lithium in brines of the Reynolds oolite unit of the Smackover Formation in southern Arkansas based on porosity. Knowledge of data-science and Python and R programming languages is a prerequisite for executing the workflow associated with this product. Users can execute the scripts to prepare input data, train a RF machine-learning model, compute uncertainty, and calculate lithium mass. Explanatory variables used to train the RF model included geologic, geochemical, and temperature data from either published datasets or created and documented in this data release and the associated companion publication (Knierim and others, 2024). See the associated metadata for details.
+
+This data release also includes output files (csvs [comma-delimited, plain-text] and rasters [geospatial grids]) of lithium concentration predictions from the RF model, uncertainty ranges, and lithium mass. The depth of prediction of lithium concentration represents the mid-point depth of the Reynolds oolite unit which varies between approximately 3,500 and 11,300 feet deep (below land-surface datum) and 0 and 400 feet thick across the model domain. For a full explanation of methods and results, see the companion manuscript Knierim and others (2024).</abstract>
+      <purpose>This data release is a companion model archive to the publication Knierim and others (2024).</purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>19360702</begdate>
+          <enddate>20220826</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>ground condition</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-94.0509</westbc>
+        <eastbc>-92.0853</eastbc>
+        <northbc>33.5424</northbc>
+        <southbc>33.0191</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>inlandWaters</themekey>
+        <themekey>geoscientificInformation</themekey>
+      </theme>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>produced waters</themekey>
+        <themekey>brine</themekey>
+        <themekey>lithium</themekey>
+        <themekey>machine learning</themekey>
+        <themekey>random forest</themekey>
+        <themekey>usg-artificial-intelligence</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>USGS:65395410d34ee4b6e05bbc08</themekey>
+      </theme>
+      <place>
+        <placekt>None</placekt>
+        <placekey>Texas</placekey>
+        <placekey>Arkansas</placekey>
+        <placekey>Louisiana</placekey>
+        <placekey>Mississippi</placekey>
+        <placekey>Alabama</placekey>
+        <placekey>Gulf Coast</placekey>
+      </place>
+    </keywords>
+    <accconst>None.  Please see 'Distribution Info' for details.</accconst>
+    <useconst>Although these data have been used by the U.S. Geological Survey (USGS), U.S. Department of the Interior, no warranty expressed or implied is made by the USGS as to the accuracy of the data. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the USGS in the use of this data, software, or related materials. Any use of trade, firm, or product names is for descriptive purposes only and does not imply endorsement by the U.S. Government. This dataset may be redistributed if it is not edited and is properly referenced. Although USGS intends to make this server available 24 hours a day, seven days a week, timely delivery of data and products from this server through the Internet is not guaranteed.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Katherine J Knierim</cntper>
+          <cntorg>U.S. Geological Survey, SOUTHEAST REGION</cntorg>
+        </cntperp>
+        <cntpos>Hydrologist</cntpos>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>401 Hardin Rd</address>
+          <city>Little Rock</city>
+          <state>AR</state>
+          <postal>72211</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>501-228-3600</cntvoice>
+        <cntemail>kknierim@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <datacred>Arkansas Department of Energy and Environment, Office of the State Geologist</datacred>
+    <native>Windows 10 Enterprise Version 22H2
+RStudio v. 6.2
+R v. 4.3
+Python v. 3.9</native>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>Attributes in entity files were checked for appropriate ranges of values and flags for missing values.</attraccr>
+    </attracc>
+    <logic>Scripts were checked for file naming consistency. Scripts were also checked to ensure that user-created output matched published output if no model parameters were changed.</logic>
+    <complete>This data release represents estimates of lithium mass in the brines of the Reynolds oolite unit of the Smackover Formation within the model domain of southern Arkansas. The model and model output (that is, lithium mass estimates) do not apply outside of the model boundaries. Additionally, cells within the model boundaries flagged as -99 do not include estimated lithium mass.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>Well locations are accurate either to approximately 10 feet (highest accuracy for samples collected in 2022) or 3 miles (lowest accuracy, for sites with estimated locations from georeferenced figures from the USGS National Produced Waters Geochemical Database (ver. 3.0, December 2023)).  See Blondes and others (2023) for details on horizontal accuracy for historical data.</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>Depths of formations are estimated from georeferenced and digitized figures. See the supplementary information in the companion publication Knierim and others (2024) for details. Well screen depths are recorded from operator information (for samples collected in 2022) or source datasets (historical samples from the USGS National Produced Waters Geochemical Database (ver. 3.0, December 2023)).</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Akin, R.H.</origin>
+            <origin>Graves, R.W.</origin>
+            <pubdate>1969</pubdate>
+            <title>Reynolds Oolite of Southern Arkansas</title>
+            <geoform>publication</geoform>
+            <serinfo>
+              <sername>AAPG Bulletin</sername>
+              <issue>v. 53</issue>
+            </serinfo>
+            <othercit>no. 9, p. 1909–1922</othercit>
+            <onlink>https://archives.datapages.com/data/bulletns/1968-70/data/pg/0053/0009/1900/1909.htm</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>19690101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Akin and Graves (1969)</srccitea>
+        <srccontr>Explanatory variables values (SAR_explanatoryvars.txt and SAR_modeldomain_rasterstack.txt) for Smackover Formation thickness (smackover_thick), altitude (smackover_alt), depth (smackover_middepth), and facies (smackover_facies) and Buckner Formation thickness (buckner_thick) and facies (buckner_facies).</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>American Association of Petroleum Geologists</origin>
+            <pubdate>20230101</pubdate>
+            <title>Reservoirs and Petroleum Systems of the Gulf Coast</title>
+            <geoform>vector digital data</geoform>
+            <othercit>accessed 10/6/23</othercit>
+            <onlink>https://www.datapages.com/gis-map-publishing-program/gis-open-files/geographic/reservoirs-and-petroleum-systems-of-the-gulf-coast</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20230101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>American Association of Petroleum Geologists (2023)</srccitea>
+        <srccontr>Explanatory variables values (SAR_explanatoryvars.txt and SAR_modeldomain_rasterstack.txt) for Smackover Formation  altitude (smackover_alt) and depth (smackover_middepth)</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Blondes, M.S.</origin>
+            <origin>Knierim, K.J.</origin>
+            <origin>Croke, M.R.</origin>
+            <origin>Freeman, P.A.</origin>
+            <origin>Doolan, C.</origin>
+            <origin>Herzberg, A.S</origin>
+            <origin>Shelton, J.L.</origin>
+            <pubdate>2023</pubdate>
+            <title>U.S. Geological Survey National Produced Waters Geochemical Database v 3.0, December 2023</title>
+            <geoform>publication</geoform>
+            <othercit>accessed 12/20/23</othercit>
+            <onlink>https://doi.org/10.5066/P9DSRCZJ</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20231227</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Blondes and others (2023)</srccitea>
+        <srccontr>Lithium concentrations in brine and explanatory variables values (SAR_explanatoryvars.txt and SAR_modeldomain_rasterstack.txt) for hydrogen sulfide concentrations (h2s_class)</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Brennan, S.T.</origin>
+            <origin>Rivera, J. L.</origin>
+            <origin>Varela, B.</origin>
+            <origin>Park, A. J.</origin>
+            <origin>Agyepong, L.A.</origin>
+            <pubdate>2021</pubdate>
+            <title>Natural Gas Compositional Analyses Dataset of Gases from United States Wells</title>
+            <geoform>dataset</geoform>
+            <pubinfo>
+              <pubplace>https://www.sciencebase.gov</pubplace>
+              <publish>U.S. Geological Survey</publish>
+            </pubinfo>
+            <onlink>https://doi.org/10.5066/p9tr93e3</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20210101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Brennan and others (2021)</srccitea>
+        <srccontr>Explanatory variables values (SAR_explanatoryvars.txt and SAR_modeldomain_rasterstack.txt) for hydrogen sulfide gas concentrations (h2s_class)</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>John J. Carroll</origin>
+            <origin>Alan E. Mather</origin>
+            <pubdate>19890601</pubdate>
+            <title>The solubility of hydrogen sulphide in water from 0 to 90°C and pressures to 1 MPa</title>
+            <geoform>publication</geoform>
+            <serinfo>
+              <sername>Geochimica et Cosmochimica Acta</sername>
+              <issue>vol. 53, issue 6</issue>
+            </serinfo>
+            <pubinfo>
+              <pubplace>n/a</pubplace>
+              <publish>Elsevier BV</publish>
+            </pubinfo>
+            <othercit>pg. 1163-1170</othercit>
+            <onlink>https://doi.org/10.1016/0016-7037(89)90053-7</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>19890601</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Carroll and Mather (1989)</srccitea>
+        <srccontr>Parameters values used to create explanatory variables values (SAR_explanatoryvars.txt and SAR_modeldomain_rasterstack.txt) for h2s_class. See Processing Steps for details.</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Jeffrey J. Danielson</origin>
+            <origin>Dean B. Gesch</origin>
+            <pubdate>2011</pubdate>
+            <title>Global multi-resolution terrain elevation data 2010 (GMTED2010)</title>
+            <geoform>publication</geoform>
+            <pubinfo>
+              <pubplace>n/a</pubplace>
+              <publish>US Geological Survey</publish>
+            </pubinfo>
+            <othercit>accessed 6/22/2022</othercit>
+            <onlink>https://doi.org/10.3133/ofr20111073</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20110101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Danielson and Gesch (2011)</srccitea>
+        <srccontr>Explanatory variables values (SAR_explanatoryvars.txt and SAR_modeldomain_rasterstack.txt) for surface altitude from a digital elevation model (DEM_1km_m)</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Dyman, T.S.</origin>
+            <origin>Condon, S.M.</origin>
+            <pubdate>2005</pubdate>
+            <title>Estimated Thickness of the Cotton Valley Group to the Top of the Smackover Formation, Western Gulf and East Texas Basin and Louisiana-Mississippi Salt Basins Provinces (047, 048 and 049)</title>
+            <geoform>publication</geoform>
+            <pubinfo>
+              <pubplace>n/a</pubplace>
+              <publish>U.S. Geologicla Survey</publish>
+            </pubinfo>
+            <othercit>accessed 3/21/24</othercit>
+            <onlink>https://doi.org/10.5066/P96FBRR9</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20050101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Dyman and Condon (2005a)</srccitea>
+        <srccontr>Explanatory variables values (SAR_explanatoryvars.txt and SAR_modeldomain_rasterstack.txt) for Cotton Valley Formation thickness (cottonvalley_thickness)</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Dyman, T.S.</origin>
+            <origin>Condon, S.M.</origin>
+            <pubdate>2005</pubdate>
+            <title>Estimated Thickness of the Travis Peak-Hosston Formations to the Top of the Cotton Valley Group, Western Gulf and East Texas Basin and Louisiana-Mississippi Salt Basins Provinces (047, 048 and 049)</title>
+            <geoform>publication</geoform>
+            <pubinfo>
+              <pubplace>n/a</pubplace>
+              <publish>U.S. Geologicla Survey</publish>
+            </pubinfo>
+            <othercit>accessed 3/21/24</othercit>
+            <onlink>https://doi.org/10.5066/P9L57LSH</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20050101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Dyman and Condon (2005b)</srccitea>
+        <srccontr>Explanatory variables values (SAR_explanatoryvars.txt and SAR_modeldomain_rasterstack.txt) for Hosston Formation thickness (hosston_thickness)</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Dyman, T.S.</origin>
+            <origin>Condon, S.M.</origin>
+            <pubdate>2005</pubdate>
+            <title>Structure Contour of the Top of the Cotton Valley Group, Western Gulf and East Texas Basin and Louisiana-Mississippi Salt Basins Provinces (047, 048 and 049)</title>
+            <geoform>publication</geoform>
+            <pubinfo>
+              <pubplace>n/a</pubplace>
+              <publish>U.S. Geological Survey</publish>
+            </pubinfo>
+            <othercit>accessed 3/21/24</othercit>
+            <onlink>https://doi.org/10.5066/P9GDO6BH</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20050101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Dyman and Condon (2005c)</srccitea>
+        <srccontr>Explanatory variables values (SAR_explanatoryvars.txt and SAR_modeldomain_rasterstack.txt) for Cotton Valley Formation altitude (hosston_alt)</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Dyman, T.S.</origin>
+            <origin>Condon, S.M.</origin>
+            <pubdate>2005</pubdate>
+            <title>Structure Contour of the Top of the Travis Peak-Hosston Formations, Western Gulf and East Texas Basin and Louisiana-Mississippi Salt Basins Provinces (047, 048 and 049)</title>
+            <geoform>publication</geoform>
+            <pubinfo>
+              <pubplace>n/a</pubplace>
+              <publish>U.S. Geological Survey</publish>
+            </pubinfo>
+            <othercit>accessed 3/21/24</othercit>
+            <onlink>https://doi.org/10.5066/P93DBED6</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20050101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Dyman and Condon (2005d)</srccitea>
+        <srccontr>Explanatory variables values (SAR_explanatoryvars.txt and SAR_modeldomain_rasterstack.txt) for Hosston Formation altitude (hosston_alt)</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>T. S. Dyman</origin>
+            <origin>S. M. Condon</origin>
+            <pubdate>2006</pubdate>
+            <title>Chapter 5. Assessment of undiscovered conventional oil and gas resources-Lower Cretaceous Travis Peak and Hosston formations, Jurassic Smackover interior salt basins total petroleum system, in the East Texas basin and Louisiana-Mississippi salt basins provinces</title>
+            <geoform>publication</geoform>
+            <pubinfo>
+              <pubplace>n/a</pubplace>
+              <publish>US Geological Survey</publish>
+            </pubinfo>
+            <onlink>https://doi.org/10.3133/ds69E_chapter5</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20060101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Dyman and Condon (2006b)</srccitea>
+        <srccontr>Explanatory variables values (SAR_explanatoryvars.txt and SAR_modeldomain_rasterstack.txt) for Hosston Formation thickness (hosston_thickness) and altitude (hosston_alt)</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>T. S. Dyman</origin>
+            <origin>S. M. Condon</origin>
+            <pubdate>2006</pubdate>
+            <title>Chapter 2. Assessment of undiscovered conventional oil and gas resources–Upper Jurassic-Lower Cretaceous Cotton Valley group, Jurassic Smackover interior salt basins total petroleum system, in the East Texas basin and Louisiana-Mississippi salt basins provinces</title>
+            <geoform>publication</geoform>
+            <pubinfo>
+              <pubplace>n/a</pubplace>
+              <publish>US Geological Survey</publish>
+            </pubinfo>
+            <onlink>https://doi.org/10.3133/ds69E_chapter2</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20060101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Dyman and Condon (2006a)</srccitea>
+        <srccontr>Explanatory variables values (SAR_explanatoryvars.txt and SAR_modeldomain_rasterstack.txt) for Cotton Valley Formation thickness (cottonvalley_thickness) and altitude (cottonvalley_alt)</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>ESRI Inc.</origin>
+            <pubdate>20230101</pubdate>
+            <title>ArcGIS Pro v3.1</title>
+            <geoform>application/service</geoform>
+            <onlink>https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20230101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>ArcPro v3.1</srccitea>
+        <srccontr>Used for creation of explanatory variables. See processing steps for details.</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Lopaka Lee</origin>
+            <pubdate>20200101</pubdate>
+            <title>NADA package, v1.6</title>
+            <geoform>application/service</geoform>
+            <onlink>https://CRAN.R-project.org/package=NADA</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20200101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Lee (2020)</srccitea>
+        <srccontr>Parameters values used to create explanatory variables values (SAR_explanatoryvars.txt and SAR_modeldomain_rasterstack.txt) for h2s_class. See Processing Steps for details.</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Li, P.</origin>
+            <pubdate>20230101</pubdate>
+            <title>Core plug analysis of the upper Smackover Formation in Lafayette County, southwestern Arkansas: Office of the State Geologist 2023–02</title>
+            <geoform>tabular digital data</geoform>
+            <onlink>https://www.geology.arkansas.gov/publication/open_file_reports/OFR-2023-02-open-file-report.html</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20230101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Li (2023)</srccitea>
+        <srccontr>Porosity values</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Olaf Mersmann</origin>
+            <origin>Heike Trautmann</origin>
+            <origin>Detlef Steuer</origin>
+            <origin>Bjorn Bornkamp</origin>
+            <pubdate>20230101</pubdate>
+            <title>truncnorm: Truncated Normal Distribution, v1.0</title>
+            <geoform>application/service</geoform>
+            <onlink>https://cran.r-project.org/web/packages/truncnorm/index.html</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20230101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Mersmann and others (2023)</srccitea>
+        <srccontr>Parameters values used to create explanatory variables values (SAR_explanatoryvars.txt and SAR_modeldomain_rasterstack.txt) for h2s_class. See Processing Steps for details.</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Nehring Associates</origin>
+            <pubdate>2019</pubdate>
+            <title>The significant oil and gas fields of the United States database</title>
+            <geoform>tabular digital data</geoform>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20190101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Nehring Associates (2019)</srccitea>
+        <srccontr>Porosity ranges and oil-to-water ratios (smackover_H2Oratios.tif)</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>S and P Global</origin>
+            <pubdate>2023</pubdate>
+            <title>Enerdeq US Well History and Production</title>
+            <geoform>tabular digital data</geoform>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20230101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>S and P Global (2023)</srccitea>
+        <srccontr>Brine volume data (smackover_H2Oprod_2022.tif) and explanatory variables values (SAR_explanatoryvars.txt and SAR_modeldomain_rasterstack.txt) for Smackover Formation bottom-hole temperature (smck_temp_int).</srccontr>
+      </srcinfo>
+      <procstep>
+        <procdesc>See the companion publication Knierim and others (2024) for a full explanation of methods. This processing step describes explanatory variables associated with the Hosston Formation. Thickness and altitude contours of the Hosston Formation (Dyman and Condon, 2005b; Dyman and Condon, 2005d; Dyman and Condon, 2006b) were converted to raster format. The thickness dataset represents the thickness of top of the Travis Peak Formation or Hosston Formation to the top of the Cotton Valley Group. The altitude dataset represents the structural configuration of the top of the Travis Peak Formation or Hosston Formation in feet below sea level. The thickness shapefile was converted to a raster dataset using the ArcPro v3.1 "Feature to Raster" tool (ESRI Inc., 2023), which creates a raster with the same contour interval as the source dataset (that is, 61 m). The altitude shapefile was converted to a raster dataset using the ArcPro v3.1 "Topo to Raster" tool (ESRI Inc., 2023), which creates a continuous surface (that is, values vary continuously between contours). The source rasters were created with a 100-square-meter resolution.</procdesc>
+        <srcused>Dyman and Condon (2005b)</srcused>
+        <srcused>Dyman and Condon (2005d)</srcused>
+        <srcused>Dyman and Condon (2006b)</srcused>
+        <procdate>20221001</procdate>
+        <srcprod>hosston_thickness</srcprod>
+        <srcprod>hosston_alt</srcprod>
+      </procstep>
+      <procstep>
+        <procdesc>See the companion publication Knierim and others (2024) for a full explanation of methods. This processing step describes explanatory variables associated with the Cotton Valley Group. Thickness and altitude contours of the Cotton Valley Group (Dyman and Condon, 2005a; Dyman and Condon, 2005c; Dyman and Condon, 2006a) were converted to a raster format. The thickness dataset represents the thickness of the top of the Cotton Valley Group to the top of the Smackover Formation. The altitude dataset represents the structural configuration of the top of the Cotton Valley Group in feet below sea level. The thickness shapefile was converted to a raster dataset using the ArcPro v3.1 "Feature to Raster" tool (ESRI Inc., 2023), which creates a raster with the same contour interval as the source dataset (that is, 61 m). The altitude shapefile was converted to a raster dataset using the ArcPro v3.1 "Topo to Raster" tool (ESRI Inc., 2023), which creates a continuous surface (that is, values vary continuously between contours).  The source rasters were created with a 100-square-meter resolution.</procdesc>
+        <srcused>Dyman and Condon (2005a)</srcused>
+        <srcused>Dyman and Condon (2005c)</srcused>
+        <srcused>Dyman and Condon (2006a)</srcused>
+        <procdate>20221001</procdate>
+        <srcprod>cottonvalley_thickness</srcprod>
+        <srcprod>cottonvalley_alt</srcprod>
+      </procstep>
+      <procstep>
+        <procdesc>See the companion publication Knierim and others (2024) for a full explanation of methods. This processing step describes explanatory variables associated with the Buckner Formation. The facies and thickness maps of the Buckner Formation in southern Arkansas were georeferenced and digitized from Figures 11 and 12, respectively, from Akin and Graves (1969). The facies map was converted from vector format to a raster using the following crosswalk: anhydrite/sand/shale = 1, shale = 2, anhydrite = 3. The thickness contours were converted to raster format using the ArcPro "Topo to Raster" tool (ESRI Inc., 2023), which creates a continuous surface where values vary continuously between contours. The source rasters were created with a 100-square-meter resolution.</procdesc>
+        <srcused>Akin and Graves (1969)</srcused>
+        <procdate>20221001</procdate>
+        <srcprod>buckner_thick</srcprod>
+        <srcprod>buckner_facies</srcprod>
+      </procstep>
+      <procstep>
+        <procdesc>See the companion publication Knierim and others (2024) for a full explanation of methods. This processing step describes explanatory variables associated with the Smackover Formation. The facies, thickness, and altitude maps of the Reynolds oolite unit of the Smackover Formation were georeferenced and digitized from Figures 4, 9, and 10, respectively, from Akin and Graves (1969). The facies map was converted from vector format to a raster using the following crosswalk: calcarenite-carbonate mudstone = 1, modified grapestone = 2, grapestone = 3, oolite = 4, and interbedded = 5. To ensure the surface for the top of the Smackover Formation extended to the full model domain, regional altitudes from the Gulf Coast were used to extend contours on the southern extent of the model domain (American Association of Petroleum Geologists, 2023). The thickness and altitude contours were converted to rasters by creating terrains in ArcPro v3.1, which creates a surface that varies continuously between contours (ESRI, 2023). The source rasters were created with a 100-square-meter resolution.</procdesc>
+        <srcused>Akin and Graves (1969)</srcused>
+        <srcused>American Association of Petroleum Geologists (2023)</srcused>
+        <procdate>20221001</procdate>
+        <srcprod>smackover_thick</srcprod>
+        <srcprod>smackover_facies</srcprod>
+        <srcprod>smackover_facies</srcprod>
+        <srcprod>smackover_middepth</srcprod>
+        <srcprod>smackover_alt</srcprod>
+      </procstep>
+      <procstep>
+        <procdesc>See the companion publication Knierim and others (2024) for a full explanation of methods. This processing step describes explanatory variables associated with the bottom-hole temperature (BHT) of the Smackover Formation. The temperature of the Smackover Formation was created by kriging BHT collected from wells drilled to the Smackover Formation. Bottom-hole temperatures were sourced from S&amp;P Global Enerdeq dataset and included 3,270 temperature records from 819 wells across southern Arkansas and northern Louisiana (S&amp;P Global, 2023). Wells ranged in depth from 423 to 4,298 meters deep (median was approximately 2,408 meters deep) and BHT ranged from 27 to 182 degrees Celsius (°C) (median was approximately 81°C). It is recommended that BHT be corrected for a given region given a sufficiently large dataset of BHT versus depth because a single BHT value may not reflect conditions in the formation at depth (Burke and others, 2019). However, the kriged BHT surface is used as input to the random forest machine-learning model to predict lithium concentrations, such that BHT needed to be independent of formation depth and, therefore, BHT values were not corrected prior to kriging. Raw BHT values were kriged using the ArcPro v3.1 “Empirical Bayesian Kriging” tool (ESRI Inc., 2023) with default parameters, which uses multiple simulations to account for error in the semivariogram associated with the input data. The final BHT surface ranged from 54 to 114°C within the model domain. The source raster was created with a 100-square-meter resolution.</procdesc>
+        <srcused>S and P Global (2023)</srcused>
+        <procdate>20221001</procdate>
+        <srcprod>smck_temp_int</srcprod>
+      </procstep>
+      <procstep>
+        <procdesc>See the companion publication Knierim and others (2024) for a full explanation of methods. This processing step describes explanatory variables associated with dissolved hydrogen sulfide (H2S) concentrations in Smackover Formation brines. Dissolved hydrogen sulfide (H2S) concentrations in Smackover Formation brines were acquired from the version 3 of the U.S. Geological Survey’s National Produced Waters Geochemical Database (PWGD) (n = 108) (Blondes and others, 2023), collected in southern Arkansas in 2022 (n = 16), or calculated from a U.S. Geological gas concentration dataset (n = 66) (Brennan and others, 2021). These data were used to krig a surface representing H2S in Smackover Formation brines across the model domain.
+Aqueous H2S concentrations were calculated from gas concentrations using H2S solubility values from Carroll and Mather (1989), which used Henry's Law to derive H2S solubility between 0 and 90°C. The temperature for each sample was calculated using the depth of brine collection, assuming a 25°C per kilometer (km) geothermal gradient. Depths ranged from 2.6 to 7.1 km and temperatures from 65 to 177°C. The calculated H2S solubilities ranged from 1.71x10-3 to 7.40x10-2 mol %. Measured gaseous H2S values ranged from 0.06 to 49.4 mol %. Based on the sample depths, calculated temperatures, and observed gaseous H2S concentrations, the calculated dissolved H2S ranged from 0.2 to 251.9 parts per million (ppm). To convert from ppm to milligrams per liter (mg/L), an average specific gravity value of 1.17 was used, which is the average specific gravity for Smackover Formation brines (Blondes and others, 2023). Dissolved H2S ranged from 0.2 to 294.7 mg/L.
+Samples in the PWGD originally from Moldovanyi and Walter (1992), samples collected in 2022, and calculated dissolved H2S included values less than a 3 mg/L detection limit (i.e., censored values). Three additional censored samples were created at northern extents of the Smackover Formation to ensure that the kriged surface extended across the model domain. H2S concentrations, not including censored values, ranged from 3 to 670 mg/L collected from depths ranging from approximately 1.3 to 7 km. Based on the minimum observed value of 3 mg/L, censored values were imputed using a detection limit of 3 mg/L and the NADA (Lee, 2020) and truncnorm (Mersmann and others, 2023) packages in R v4.3 (R Core Team, 2023) to randomly sample over the log distribution of values between 0 and 3 mg/L. 
+The observed (n = 61) and imputed (n = 121) values were used to krig an H2S map in ArcPro v3.1 using Empirical Bayesian Kriging, which uses multiple simulations to account for error in the semivariogram associated with the input data (ESRI Inc., 2023). The Empirical Bayesian Kriging routine used 150 points in each local model, a minimum of 5 points in the search neighborhood, maximum of 15 points in the search neighborhood, and default values for other parameters. H2S values from the Gulf Coast outside of the model domain were used in kriging to improve accuracy at the model boundaries. The kriged surface ranged from 0 to 647 mg/L, and 0 to 467 mg/L within the model domain. Because of uncertainty in H2S concentrations, especially at concentrations greater than approximately 100 mg/L, the surface was binned into H2S classes: less than or equal to 3 mg/L was assigned 3 mg/L; greater than 3 and less than or equal to 10 mg/L was assigned 10 mg/L; greater than 10 and less than or equal to 50 mg/L was assigned 50 mg/L; greater than 50 and less than or equal to 100 mg/L was assigned 100 mg/L; greater than 100 and less than or equal to 200 was assigned 200 mg/L; greater than 200 and less than or equal to 300 was assigned 300 mg/L, and greater than 300 mg/L was assigned 467 mg/L (the maximum value).</procdesc>
+        <srcused>Blondes and others (2023)</srcused>
+        <srcused>Brennan and others (2021)</srcused>
+        <procdate>20230901</procdate>
+        <srcprod>h2s_class</srcprod>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Raster</direct>
+    <rastinfo>
+      <rasttype>Grid Cell</rasttype>
+      <rowcount>32</rowcount>
+      <colcount>90</colcount>
+      <vrtcount>1</vrtcount>
+    </rastinfo>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>Albers Conical Equal Area</mapprojn>
+          <albers>
+            <stdparll>29.5</stdparll>
+            <stdparll>45.5</stdparll>
+            <longcm>-96.0</longcm>
+            <latprjo>23.0</latprjo>
+            <feast>0.0</feast>
+            <fnorth>0.0</fnorth>
+          </albers>
+        </mapproj>
+        <planci>
+          <plance>row and column</plance>
+          <coordrep>
+            <absres>2000.0</absres>
+            <ordres>2000.0</ordres>
+          </coordrep>
+          <plandu>meters</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>WGS_1984</horizdn>
+        <ellips>WGS 84</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+    <vertdef>
+      <altsys>
+        <altdatum>North American Vertical Datum of 1988</altdatum>
+        <altres>1</altres>
+        <altunits>feet</altunits>
+        <altenc>Implicit coordinate</altenc>
+      </altsys>
+      <depthsys>
+        <depthdn>Local surface</depthdn>
+        <depthres>1</depthres>
+        <depthdu>feet</depthdu>
+        <depthem>Implicit coordinate</depthem>
+      </depthsys>
+    </vertdef>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>readme.md</enttypl>
+        <enttypd>Readme file containing file structure and description details for the data release and instructions for how to run the scripts associated with the model archive.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>modelgeoref.txt</enttypl>
+        <enttypd>Model georeference text file representing model corners and projection information.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>1_SARLi_dataprep.py</enttypl>
+        <enttypd>Python script to prepare the input data for the random forest machine-learning model of lithium.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>2_SARLi_RFmodel.R</enttypl>
+        <enttypd>R script to train a random forest machine-learning model to predict lithium concentrations at well sample locations and raster cells.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>3_SARLi_uncertainty.py</enttypl>
+        <enttypd>Python script to calculate uncertainty using the output of predicted lithium concentrations across the model domain based on all models with a root-mean-square-error (RMSE) within one standard error of the model with the lowest RMSE model, also known as "one-se models".</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>4_SARLi_estimate.py</enttypl>
+        <enttypd>Python script containing functions to estimate the mass of lithium in brines of the Reynolds oolite unit of the Smackover Formation in southern Arkansas.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>grid/SAR_modeldomain_4269.shp</enttypl>
+        <enttypd>Shapefile of the southern AR model domain</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Shape type.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Id</attrlabl>
+        <attrdef>grid cell number</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>2880</rdommax>
+            <attrunit>NA</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>gridcode</attrlabl>
+        <attrdef>grid cell number</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>2880</rdommax>
+            <attrunit>NA</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>grid/SAR_modeldomain_mask.tif</enttypl>
+        <enttypd>Raster geospatial data file (tif) representing model cells that are masked (0) or not masked (1).</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Value</attrlabl>
+        <attrdef>Numeric value representing masked (0) or not masked (1) cells.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0.0</edomv>
+            <edomvd>masked cell, does not contain lithium concentrations predictions or lithium mass estimates</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1.0</edomv>
+            <edomvd>unmasked cell</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>input/brine/smackover_H2Oprod_2022.tif</enttypl>
+        <enttypd>Raster geospatial data file (tif) representing brine production volumes in 2022 from S&amp;P Global (2023).</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Value</attrlabl>
+        <attrdef>Brine production volume for the 4-kilometer-square raster grid cell.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>100.0</rdommin>
+            <rdommax>14663091.0</rdommax>
+            <attrunit>barrels</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>input/brine/smackover_H2Oratios.tif</enttypl>
+        <enttypd>Raster geospatial data file (tif) representing oil to water ratios from Nehring Associates (2019).</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Value</attrlabl>
+        <attrdef>Water to Oil ratios (as a fraction) for the 4-kilometer-square raster grid cell.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.10999999940395355</rdommin>
+            <rdommax>0.8999999761581421</rdommax>
+            <attrunit>ratio</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>input/exvars/SAR_explanatoryvars.txt</enttypl>
+        <enttypd>Comma-delimited text file (txt) representing explanatory variables values at well sample (point) locations.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>SITEID</attrlabl>
+        <attrdef>Site identifier</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>Site identifier (unique)</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DEM_1km_m</attrlabl>
+        <attrdef>Surface altitude from a Digital Elevation Model (DEM) from Danielson and Gesch (2011)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>35.0</rdommin>
+            <rdommax>115.0</rdommax>
+            <attrunit>meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>hosston_alt</attrlabl>
+        <attrdef>Altitude representing the structural configuration of the top of the Travis Peak Formation or Hosston Formation in meters below sea level from Dyman and Condon (2005b)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-1860.0</rdommin>
+            <rdommax>-774.0</rdommax>
+            <attrunit>meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>hosston_thickness</attrlabl>
+        <attrdef>Thickness of top of the Travis Peak Formation or Hosston Formation to the top of the Cotton Valley Group from Dyman and Condon (2005b)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>91.0</rdommin>
+            <rdommax>579.0</rdommax>
+            <attrunit>meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>cottonvalley_alt</attrlabl>
+        <attrdef>Altitude representing the structural configuration of the top of the Cotton Valley Group in meters below sea level from Dyman and Condon (2005a)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-2393.0</rdommin>
+            <rdommax>-1010.0</rdommax>
+            <attrunit>meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>cottonvalley_thickness</attrlabl>
+        <attrdef>Thickness of the top of the Cotton Valley Group to the top of the Smackover Formation from Dyman and Condon (2005a)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>152.0</rdommin>
+            <rdommax>1006.0</rdommax>
+            <attrunit>meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>buckner_facies</attrlabl>
+        <attrdef>Facies categories for the Buckner Anhydrite Member of the Haynesville Formation from Akin and Graves (1969)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>anhydrite/sand/shale</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>shale</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>anhydrite</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>buckner_thick</attrlabl>
+        <attrdef>Thickness of the Buckner Anhydrite Member of the Haynesville Formation from Akin and Graves (1969)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>20.0</rdommin>
+            <rdommax>109.0</rdommax>
+            <attrunit>meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>h2s_class</attrlabl>
+        <attrdef>Dissolved hydrogen sulfide (H2S) concentration (in mg/L) in Smackover Formation brines, represented as classes. See the Processing Steps in this data release and the supplementary information of the companion publication Knierim and others (2024) for details.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>Less than or equal to 3 mg/L</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>10</edomv>
+            <edomvd>Greater than 3 mg/L and less than or equal to 10 mg/L</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>50</edomv>
+            <edomvd>Greater than 10 mg/L and less than or equal to 50 mg/L</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>100</edomv>
+            <edomvd>Greater than 50 mg/L and less than or equal to 100 mg/L</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>200</edomv>
+            <edomvd>Greater than 100 mg/L and less than or equal to 200 mg/L</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>300</edomv>
+            <edomvd>Greater than 200 mg/L and less than or equal to 300 mg/L</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>467</edomv>
+            <edomvd>Greater than 300 mg/L</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>smackover_alt</attrlabl>
+        <attrdef>Altitude of the top of the Reynolds oolite unit of the Smackover Formation in meters below sea level from Akin and Graves (1969)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-3242.0</rdommin>
+            <rdommax>-1335.0</rdommax>
+            <attrunit>meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>smackover_facies</attrlabl>
+        <attrdef>Facies class of the Reynolds oolite unit of the Smackover Formation from Akin and Graves (1969)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>modified grapestone</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>grapestone</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>4</edomv>
+            <edomvd>oolite</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>5</edomv>
+            <edomvd>interbedded</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>smackover_middepth</attrlabl>
+        <attrdef>Mid-point depth of the Reynolds oolite unit of the Smackover Formation in meters from Akin and Graves (1969)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1472.0</rdommin>
+            <rdommax>3325.0</rdommax>
+            <attrunit>meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>smackover_thick</attrlabl>
+        <attrdef>Thickness of the Reynolds oolite unit of the Smackover Formation in meters from Akin and Graves (1969)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>12.0</rdommin>
+            <rdommax>122.0</rdommax>
+            <attrunit>meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>smck_temp_int</attrlabl>
+        <attrdef>Bottom-hole temperature of the Smackover Formation from S and P Global (2023).</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>59</rdommin>
+            <rdommax>111</rdommax>
+            <attrunit>Celsius</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>input/exvars/SAR_modeldomain_rasterstack.txt</enttypl>
+        <enttypd>Comma-delimited text file (txt) representing explanatory variables values at raster cell locations across the model domain.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>buckner_facies</attrlabl>
+        <attrdef>Facies categories for the Buckner Anhydrite Member of the Haynesville Formation from Akin and Graves (1969)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>anhydrite/sand/shale</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>shale</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>anhydrite</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>buckner_thick</attrlabl>
+        <attrdef>Thickness of the Buckner Anhydrite Member of the Haynesville Formation from Akin and Graves (1969). Negative thickness values represent areas of 0 thickness, and are masked from the final model.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-21.0</rdommin>
+            <rdommax>124.0</rdommax>
+            <attrunit>meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>cottonvalley_alt</attrlabl>
+        <attrdef>Altitude representing the structural configuration of the top of the Cotton Valley Group in meters below sea level from Dyman and Condon (2005a)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-2667.0</rdommin>
+            <rdommax>-808.0</rdommax>
+            <attrunit>meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>cottonvalley_thickness</attrlabl>
+        <attrdef>Thickness of the top of the Cotton Valley Group to the top of the Smackover Formation from Dyman and Condon (2005a). Negative thickness values represent areas of 0 thickness, and are masked from the final model.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-3048.0</rdommin>
+            <rdommax>1059.0</rdommax>
+            <attrunit>meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>h2s_class</attrlabl>
+        <attrdef>Dissolved hydrogen sulfide (H2S) concentration (in mg/L) in Smackover Formation brines, represented as classes. See the supplementary information of the companion publication Knierim and others (2024) for details.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>Less than or equal to 3 mg/L</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>10</edomv>
+            <edomvd>Greater than 3 mg/L and less than or equal to 10 mg/L</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>50</edomv>
+            <edomvd>Greater than 10 mg/L and less than or equal to 50 mg/L</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>100</edomv>
+            <edomvd>Greater than 50 mg/L and less than or equal to 100 mg/L</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>200</edomv>
+            <edomvd>Greater than 100 mg/L and less than or equal to 200 mg/L</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>300</edomv>
+            <edomvd>Greater than 200 mg/L and less than or equal to 300 mg/L</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>467</edomv>
+            <edomvd>Greater than 300 mg/L</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>hosston_alt</attrlabl>
+        <attrdef>Altitude representing the structural configuration of the top of the Travis Peak Formation or Hosston Formation in meters below sea level from Dyman and Condon (2005b)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-2026.0</rdommin>
+            <rdommax>-622.0</rdommax>
+            <attrunit>meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>hosston_thickness</attrlabl>
+        <attrdef>Thickness of top of the Travis Peak Formation or Hosston Formation to the top of the Cotton Valley Group from Dyman and Condon (2005b)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>30.0</rdommin>
+            <rdommax>622.0</rdommax>
+            <attrunit>meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>smackover_alt</attrlabl>
+        <attrdef>Altitude of the top of the Reynolds oolite unit of the Smackover Formation in meters below sea level from Akin and Graves (1969)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-3351.0</rdommin>
+            <rdommax>-1042.0</rdommax>
+            <attrunit>meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>smackover_facies</attrlabl>
+        <attrdef>Facies class of the Reynolds oolite unit of the Smackover Formation from Akin and Graves (1969)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>calcarenite-carbonate mudstone</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>modified grapestone</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>grapestone</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>4</edomv>
+            <edomvd>oolite</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>5</edomv>
+            <edomvd>interbedded</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>smackover_middepth</attrlabl>
+        <attrdef>Mid-point depth of the Reynolds oolite unit of the Smackover Formation in meters from  Akin and Graves (1969)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1084.0</rdommin>
+            <rdommax>3437.0</rdommax>
+            <attrunit>meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>smackover_thick</attrlabl>
+        <attrdef>Thickness of the Reynolds oolite unit of the Smackover Formation in meters from Akin and Graves (1969)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>122.0</rdommax>
+            <attrunit>meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>smck_temp_int</attrlabl>
+        <attrdef>Bottom-hole temperature of the Smackover Formation from S&amp;P Global (2023).</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>54.0</rdommin>
+            <rdommax>114.0</rdommax>
+            <attrunit>Celsius</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>input/usgs_pwgd/sar_pwgdv3_updateddepths.csv</enttypl>
+        <enttypd>Comma Separated Value (CSV) file containing depth data for 15 wells where depth was missing from the USGS Produced Waters Geochemical Database (ver.3). Depths information was using associated well metadata (identifiers, location, formation information) and the Arkansas Oil and Gas Commission’s Well Logs Cabinet (https://www.aogc.state.ar.us/docuware/welllog.aspx)</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>IDUSGS</attrlabl>
+        <attrdef>Site Identifier</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>Site identifier (unique)</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DEPTHUPPER</attrlabl>
+        <attrdef>Depth of the top of the perforated interval</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>2263</rdommin>
+            <rdommax>8417</rdommax>
+            <attrunit>feet</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DEPTHLOWER</attrlabl>
+        <attrdef>Depth of the bottom of the perforated interval</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>2775</rdommin>
+            <rdommax>9850</rdommax>
+            <attrunit>feet</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>input/usgs_southAR/southAR_brines_2022.txt</enttypl>
+        <enttypd>Comma-delimited text file of observed brine geochemistry.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>DSOURCE</attrlabl>
+        <attrdef>Dataset Source</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>AR2022</edomv>
+            <edomvd>Samples collected in southern Arkansas in August 2022</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IDDB</attrlabl>
+        <attrdef>Dataset identifier</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>AR2022</edomv>
+            <edomvd>Samples collected in southern Arkansas in August 2022</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SITEID</attrlabl>
+        <attrdef>Site identifier</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>Site identifier (unique character strings)</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>WELLNAME</attrlabl>
+        <attrdef>Well name</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>Well name (character strings)</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FIELD</attrlabl>
+        <attrdef>Field names</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <udom>Field names (character strings)</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>WELLTYPE</attrlabl>
+        <attrdef>Well type</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Oil</edomv>
+            <edomvd>oil well</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Brine</edomv>
+            <edomvd>brine well</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LATITUDE</attrlabl>
+        <attrdef>Latitude of well (NAD83)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>33.04938887</rdommin>
+            <rdommax>33.4587</rdommax>
+            <attrunit>decimal degrees</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LONGITUDE</attrlabl>
+        <attrdef>Longitude of well (NAD83)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-93.5793</rdommin>
+            <rdommax>-92.27663002</rdommax>
+            <attrunit>decimal degrees</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>STATE</attrlabl>
+        <attrdef>State name of well location</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>State name (character string)</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>COUNTY</attrlabl>
+        <attrdef>County name of well location</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>County name (character string)</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>REGION</attrlabl>
+        <attrdef>USGS 1995 National Oil and Gas Assessment Region Boundaries</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Gulf Coast</edomv>
+            <edomvd>Gulf Coast Region</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PROVINCE</attrlabl>
+        <attrdef>USGS 1995 National Oil and Gas Assessment Province Boundaries</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Louisiana-Mississippi Salt Basins</edomv>
+            <edomvd>Louisiana-Mississippi Salt Basins Province</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>BASIN</attrlabl>
+        <attrdef>Geologic basin</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Arkla</edomv>
+            <edomvd>Arkla basin</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DEPTHUPPER</attrlabl>
+        <attrdef>Depth of the top of the perforated interval</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>2274</rdommin>
+            <rdommax>7934</rdommax>
+            <attrunit>feet</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DEPTHLOWER</attrlabl>
+        <attrdef>Depth of the bottom of the perforated interval</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>2385</rdommin>
+            <rdommax>9604</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FORMATION</attrlabl>
+        <attrdef>Geologic formation of the brine sample</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Smackover</edomv>
+            <edomvd>Smackover Formation</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Cotton Valley</edomv>
+            <edomvd>Cotton Valley Group</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Rodessa</edomv>
+            <edomvd>Rodessa Formation of Trinity Group</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>James</edomv>
+            <edomvd>James Limestone of Trinity Group</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Pettet</edomv>
+            <edomvd>Pettet Limestone Member of Sligo Formation</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Hosston</edomv>
+            <edomvd>Hosston Formation</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Nacatoch</edomv>
+            <edomvd>Nacatoch Formation</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FRM_GRP</attrlabl>
+        <attrdef>Simplified geologic formation of the brine sample</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Smackover</edomv>
+            <edomvd>Smackover Formation</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Cotton Valley</edomv>
+            <edomvd>Cotton Valley Group</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Trinity Grp</edomv>
+            <edomvd>Trinity Group</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Nuevo Leon Grp</edomv>
+            <edomvd>Nuevo Leon Group</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Nacatoch</edomv>
+            <edomvd>Nacatoch Formation</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TYPESAMPLE</attrlabl>
+        <attrdef>Type of brine sample</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>sample</edomv>
+            <edomvd>environmental sample</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>field duplicate</edomv>
+            <edomvd>field duplicate (quality assurance-quality control)</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>method duplicate</edomv>
+            <edomvd>method duplicate (quality assurance-quality control)</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>blank</edomv>
+            <edomvd>blank (quality assurance-quality control)</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LOCSAMPLE</attrlabl>
+        <attrdef>Location of brine sample collection</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>WH</edomv>
+            <edomvd>well head</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>SEP</edomv>
+            <edomvd>separator</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>QC</edomv>
+            <edomvd>quality assurance-quality control</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DATESAMPLE</attrlabl>
+        <attrdef>Date sampled</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>8/22/2022</rdommin>
+            <rdommax>8/26/2022</rdommax>
+            <attrunit>date</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TEMP</attrlabl>
+        <attrdef>Field brine temperature</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>23.89</rdommin>
+            <rdommax>94.44</rdommax>
+            <attrunit>Celsius</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PH</attrlabl>
+        <attrdef>Field pH of brine sample</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>4.47</rdommin>
+            <rdommax>9.38</rdommax>
+            <attrunit>standard units</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PHT</attrlabl>
+        <attrdef>Temperature of pH measurement</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>25.59</rdommin>
+            <rdommax>48.15</rdommax>
+            <attrunit>Celsius</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>COND</attrlabl>
+        <attrdef>Field specific conductance</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.012</rdommin>
+            <rdommax>251.7</rdommax>
+            <attrunit>microsiemens per centimeter</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SG</attrlabl>
+        <attrdef>Specific gravity</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>1.23</rdommax>
+            <attrunit>unitless</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TDS</attrlabl>
+        <attrdef>Total Dissolved Solids</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>29000</rdommin>
+            <rdommax>343000</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>H2S</attrlabl>
+        <attrdef>Dissolved hydrogen sulfide</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999 and -8888</edomv>
+            <edomvd>No Data and Censored Data (below limit of detection)</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>78.7</rdommin>
+            <rdommax>217.6</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Br</attrlabl>
+        <attrdef>Bromide</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.194</rdommin>
+            <rdommax>5790</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Cl</attrlabl>
+        <attrdef>Chloride</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;5.87</rdommin>
+            <rdommax>193000</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SO4</attrlabl>
+        <attrdef>Sulfate</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.100</rdommin>
+            <rdommax>636</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>B</attrlabl>
+        <attrdef>Boron</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.0974</rdommin>
+            <rdommax>241</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ba</attrlabl>
+        <attrdef>Barium</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.125</rdommin>
+            <rdommax>220</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ca</attrlabl>
+        <attrdef>Calcium</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;3.83</rdommin>
+            <rdommax>39900</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FeTot</attrlabl>
+        <attrdef>Iron</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.070</rdommin>
+            <rdommax>358</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>K</attrlabl>
+        <attrdef>Potassium</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.873</rdommin>
+            <rdommax>3290</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Li</attrlabl>
+        <attrdef>Lithium</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.001</rdommin>
+            <rdommax>252</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Mg</attrlabl>
+        <attrdef>Magnesium</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.389</rdommin>
+            <rdommax>3720</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Mn</attrlabl>
+        <attrdef>Manganese</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.010</rdommin>
+            <rdommax>&gt;54</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Na</attrlabl>
+        <attrdef>Sodium</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;12.5</rdommin>
+            <rdommax>72800</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Si</attrlabl>
+        <attrdef>Silica</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.060</rdommin>
+            <rdommax>12.8</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Sr</attrlabl>
+        <attrdef>Strontium</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.389</rdommin>
+            <rdommax>2550</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Al</attrlabl>
+        <attrdef>Aluminum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.12</rdommin>
+            <rdommax>&lt;0.811</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>As</attrlabl>
+        <attrdef>Arsenic</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.05</rdommin>
+            <rdommax>&lt;0.338</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Be</attrlabl>
+        <attrdef>Beryllium</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.007</rdommin>
+            <rdommax>&lt;0.0473</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Cd</attrlabl>
+        <attrdef>Cadmium</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.006</rdommin>
+            <rdommax>0.237</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Co</attrlabl>
+        <attrdef>Cobalt</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.02</rdommin>
+            <rdommax>&lt;0.135</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Cu</attrlabl>
+        <attrdef>Copper</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.02</rdommin>
+            <rdommax>&lt;0.135</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Cr</attrlabl>
+        <attrdef>Chromium</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.008</rdommin>
+            <rdommax>0.257</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Hg</attrlabl>
+        <attrdef>Mercury</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.04</rdommin>
+            <rdommax>&lt;0.27</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Mo</attrlabl>
+        <attrdef>Molybdenum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.04</rdommin>
+            <rdommax>&lt;0.27</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ni</attrlabl>
+        <attrdef>Nickel</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.03</rdommin>
+            <rdommax>0.0955</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Pb</attrlabl>
+        <attrdef>Lead</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.08</rdommin>
+            <rdommax>14.8</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>U</attrlabl>
+        <attrdef>Uranium</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.3</rdommin>
+            <rdommax>&lt;2.03</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>V</attrlabl>
+        <attrdef>Vanadium</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.02</rdommin>
+            <rdommax>&lt;0.135</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Zn</attrlabl>
+        <attrdef>Zinc</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt;0.05</rdommin>
+            <rdommax>105</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DIC</attrlabl>
+        <attrdef>Dissolved Inorganic Carbon</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt; 0.2</rdommin>
+            <rdommax>63.32</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>NPOC</attrlabl>
+        <attrdef>Non-purgeable organic carbon</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt; 0.64</rdommin>
+            <rdommax>162.3</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Acetate</attrlabl>
+        <attrdef>Acetate</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999 and -8888</edomv>
+            <edomvd>No Data and Below Censored Level</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>&lt; 1</rdommin>
+            <rdommax>376</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>dD_H2O</attrlabl>
+        <attrdef>Stable isotope of H2O, deuterium (d2H)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>-25.29</rdommin>
+            <rdommax>6.75</rdommax>
+            <attrunit>per mil</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>d18O_H2O</attrlabl>
+        <attrdef>Stable isotope of H2O, oxygen (d18O)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>-5.94</rdommin>
+            <rdommax>5.8</rdommax>
+            <attrunit>per mil</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>output/SAR_Lipreds.csv</enttypl>
+        <enttypd>Comma Separated Value (CSV) file of observed and predicted lithium concentrations at brine sample locations (wells) from a random forest machine-learning model.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>SITEID</attrlabl>
+        <attrdef>Site identifier</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>unique site identifier</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LATITUDE</attrlabl>
+        <attrdef>Latitude of well (NAD83)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>32.9992</rdommin>
+            <rdommax>33.56480657</rdommax>
+            <attrunit>decimal degrees</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LONGITUDE</attrlabl>
+        <attrdef>Longitude of well (NAD83)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-94.03707444</rdommin>
+            <rdommax>-92.27663002</rdommax>
+            <attrunit>decimal degrees</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>mtype</attrlabl>
+        <attrdef>Flag for whether the sample was used in the training or holdout datasets</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>train</edomv>
+            <edomvd>Sample used in training dataset to tune the random forest machine-learning model</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>holdout</edomv>
+            <edomvd>Sample used in holdout dataset to evaluate the model performance of the random forest machine-learning model</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Li</attrlabl>
+        <attrdef>Observed lithium concentration</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.27</rdommin>
+            <rdommax>477.0</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Li_pred</attrlabl>
+        <attrdef>Predicted lithium concentration at well locations from the random forest machine-learning model</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>3.7</rdommin>
+            <rdommax>407.8</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>pred_dif</attrlabl>
+        <attrdef>Difference in the observed and predicted lithium concentrations</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-168.8</rdommin>
+            <rdommax>96.7</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ras_pred</attrlabl>
+        <attrdef>Predicted lithium concentration at the raster call where the well is located from the random forest machine-learning model</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-99</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>13</rdommin>
+            <rdommax>378</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>rpred_dif</attrlabl>
+        <attrdef>Difference in the observed and predicted lithium concentrations at the raster call where the well is located.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-99</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>-194</rdommin>
+            <rdommax>338.14</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>output/SAR_smackover_Liestimate.csv</enttypl>
+        <enttypd>Comma Separated Value (CSV) file containing brine volume and lithium mass estimates in brines of the Reynolds oolite unit of the Smackover Formation within the southern Arkansas model domain.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>model</attrlabl>
+        <attrdef>Flag for the predicted lithium concentrations used in the lithium mass estimate.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>low</edomv>
+            <edomvd>Low end-member model, from the predicted lithium concentration using the 5th percentile of predicted lithium concentrations from one-standard error (one-SE) models (smackover_Li_uncertainty_p5.tif).</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>median</edomv>
+            <edomvd>Median model, from the predicted lithium concentration using the 50th percentile of predicted lithium concentrations from one-standard error (one-SE) models.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>high</edomv>
+            <edomvd>High end-member model, from the predicted lithium concentration using the 95th percentile of predicted lithium concentrations from one-standard error (one-SE) models (smackover_Li_uncertainty_p95.tif).</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>avgLi_mgL</attrlabl>
+        <attrdef>Average lithium concentration in brines of the Reynolds oolite unit of the Smackover Formation for the low, median, and high random forest machine-learning model predictions</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>96.0</rdommin>
+            <rdommax>119.0</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>porosity_perc</attrlabl>
+        <attrdef>Average assumed porosity of the Reynolds oolite unit of the Smackover Formation for the brine volume estimates.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>10</rdommin>
+            <rdommax>30</rdommax>
+            <attrunit>percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>avgVol_L</attrlabl>
+        <attrdef>Average brine volume of the Reynolds oolite unit of the Smackover Formation using the assumed porosity values.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>25925574422</rdommin>
+            <rdommax>77776723267</rdommax>
+            <attrunit>liters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>sumVol_L</attrlabl>
+        <attrdef>Total brine volume of the Reynolds oolite unit of the Smackover Formation using the assumed porosity values.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>65436149842170</rdommin>
+            <rdommax>196308449526510</rdommax>
+            <attrunit>liters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>sumLi_ton</attrlabl>
+        <attrdef>Total lithium mass in brines of the Reynolds oolite unit of the Smackover Formation for the low, median, and high random forest machine-learning model predictions and assumed porosity values.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>5079600</rdommin>
+            <rdommax>19040582</rdommax>
+            <attrunit>tons</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>sumLi_LCE</attrlabl>
+        <attrdef>Total lithium mass in brines of the Reynolds oolite unit of the Smackover Formation for the low, median, and high random forest machine-learning model predictions and assumed porosity values.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>27037289</rdommin>
+            <rdommax>101347688</rdommax>
+            <attrunit>tons lithium carbonate equivalents</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>sumLi_ton_ext</attrlabl>
+        <attrdef>Total lithium mass in brines of the Reynolds oolite unit of the Smackover Formation for the low, median, and high random forest machine-learning model predictions and assumed porosity values brought to the surface in 2022.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>4454</rdommin>
+            <rdommax>5142</rdommax>
+            <attrunit>tons</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>perc_ext</attrlabl>
+        <attrdef>Percent of lithium mass in brines of the Reynolds oolite unit of the Smackover Formation for the low, median, and high random forest machine-learning model predictions and assumed porosity values brought to the surface in 2022.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0886</rdommin>
+            <rdommax>0.027</rdommax>
+            <attrunit>percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>output/smackover_Li_preds.tif</enttypl>
+        <enttypd>Raster geospatial data file (tif) of predicted lithium concentrations in brines of the Reynolds oolite unit of the Smackover Formation from a random-forest machine learning model.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Value</attrlabl>
+        <attrdef>Predicted lithium concentrations in brines of the Reynolds oolite unit of the Smackover Formation</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-99</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>12</rdommin>
+            <rdommax>389</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>output/smackover_Li_uncertainty_p5.tif</enttypl>
+        <enttypd>Raster geospatial data file (tif) of predicted lithium concentrations in brines of the Reynolds oolite unit of the Smackover Formation from the 5th percentile of predicted lithium concentrations from one-standard error (one-SE) models.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Value</attrlabl>
+        <attrdef>Predicted lithium concentrations in brines of the Reynolds oolite unit of the Smackover Formation from the 5th percentile of predicted lithium concentrations from one-standard error (one-SE) models.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-99</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>12</rdommin>
+            <rdommax>332</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>output/smackover_Li_uncertainty_p95.tif</enttypl>
+        <enttypd>Raster geospatial data file (tif) of predicted lithium concentrations in brines of the Reynolds oolite unit of the Smackover Formation from the 95th percentile of predicted lithium concentrations from one-standard error (one-SE) models.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Value</attrlabl>
+        <attrdef>Predicted lithium concentrations in brines of the Reynolds oolite unit of the Smackover Formation from the 95th percentile of predicted lithium concentrations from one-standard error (one-SE) models.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-99</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>20</rdommin>
+            <rdommax>393</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>output/smackover_Li_uncertainty_qualunc.tif</enttypl>
+        <enttypd>Raster geospatial data file (tif) of predicted qualitative uncertainty in lithium concentrations in brines of the Reynolds oolite unit of the Smackover Formation from one-standard error (one-SE) models.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Value</attrlabl>
+        <attrdef>Predicted qualitative uncertainty in lithium concentrations in brines of the Reynolds oolite unit of the Smackover Formation from one-standard error (one-SE) models.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-99</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>Predicted lithium concentration is very likely less than 100 mg/L</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Predicted lithium concentration is likely less than 100 mg/L</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>Predicted lithium concentration is likely equal to or greater than 100 mg/L</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>Predicted lithium concentration is very likely equal to or greater than 100 mg/L</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>output/smackover_Li_uncertainty_rngp.tif</enttypl>
+        <enttypd>Raster geospatial data file (tif) of the difference in predicted lithium concentrations in brines of the Reynolds oolite unit of the Smackover Formation from the 95th and 5th percentile of predicted lithium concentrations from one-standard error (one-SE) models.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Value</attrlabl>
+        <attrdef>Difference in the predicted lithium concentrations in brines of the Reynolds oolite unit of the Smackover Formation from the 90th and 10th percentile of predicted lithium concentrations from one-standard error (one-SE) models.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-99</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>2</rdommin>
+            <rdommax>83</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>output/smackover_Li_uncertainty_p50.tif</enttypl>
+        <enttypd>Raster geospatial data file (tif) of predicted lithium concentrations in brines of the Reynolds oolite unit of the Smackover Formation from the 50th percentile (median) of predicted lithium concentrations from one-standard error (one-SE) models.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Value</attrlabl>
+        <attrdef>Predicted lithium concentrations in brines of the Reynolds oolite unit of the Smackover Formation from the 50th percentile (median) of predicted lithium concentrations from one-standard error (one-SE) models.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>14</rdommin>
+            <rdommax>370</rdommax>
+            <attrunit>mg/L</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>This data release is organized with 2 files and 1 zipped directory of the model archive on the main landing page.</eaover>
+      <eadetcit>See the readme.md for details of file structure and descriptions.</eadetcit>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntperp>
+          <cntper>GS ScienceBase</cntper>
+          <cntorg>U.S. Geological Survey</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>1-888-275-8747</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty.
+
+Any use of trade, firm, or product names is for descriptive purposes only and does not imply endorsement by the U.S. Government.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>Digital Data</formname>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://doi.org/10.5066/P9QPRYZN</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None</fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20240821</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>Katherine J Knierim</cntper>
+          <cntorg>U.S. Geological Survey, SOUTHEAST REGION</cntorg>
+        </cntperp>
+        <cntpos>Hydrologist</cntpos>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>401 Hardin Rd</address>
+          <city>Little Rock</city>
+          <state>AR</state>
+          <postal>72211</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>501-228-3600</cntvoice>
+        <cntemail>kknierim@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

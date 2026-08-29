@@ -1,0 +1,17 @@
+# Publication
+# Knierim, K.J. and others XXXX
+
+# Data Release
+# Katherine J. Knierim, Madalyn S. Blondes, Philip A. Freeman, Andrew L. Masterson, Bonnie McDevitt, Amanda Herzberg, Colin Doolan, Jessica M. Chenault, Aaron Jubb, and Mary R. Croke, 2024, Lithium observations, machine-learning predictions, and mass estimates from the Smackover Formation brines in southern Arkansas: U.S. Geological Survey data release, https://doi.org/10.5066/P9QPRYZN
+
+# USA Contiguous Albers Equal Area Conic USGS WGS 1984 in meters
+# PROJCS["unknown",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["latitude_of_center",23],PARAMETER["longitude_of_center",-96],PARAMETER["standard_parallel_1",29.5],PARAMETER["standard_parallel_2",45.5],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH]]
+  
+upper_left	180955 1171285 
+upper_right	360955 1171285
+lower_right	360955 1107285 
+lower_left	180955 1107285
+
+# LATITUDE and LONGITUDE of well locations NAD 1983 (2011)
+
+ 
