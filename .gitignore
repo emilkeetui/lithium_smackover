@@ -10,6 +10,24 @@
 /outputs/intermediate/
 /outputs/logs/
 
+# LaTeX build artifacts (mirrors mining_wq/.gitignore — keeps Overleaf GitHub sync clean)
+writeup/*.aux
+writeup/*.log
+writeup/*.pdf
+writeup/*.zip
+writeup/**/*.aux
+writeup/**/*.bcf
+writeup/**/*.blg
+writeup/**/*.bbl
+writeup/**/*.fdb_latexmk
+writeup/**/*.fls
+writeup/**/*.log
+writeup/**/*.run.xml
+writeup/**/*.out
+writeup/**/*.nav
+writeup/**/*.snm
+writeup/**/*.toc
+
 # Python
 __pycache__/
 *.pyc
