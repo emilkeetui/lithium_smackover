@@ -18,7 +18,7 @@ import networkx as nx
 import pandas as pd
 import pyogrio
 
-from utils import OUT, OUT_INT, TOHUC_SINKS, norm_tohuc, zpad_huc12
+from utils import OUT, OUT_INT, TOHUC_SINKS, dedup_pop_served, norm_tohuc, zpad_huc12
 
 SUPER_SOURCE = "__SW_INTAKES__"
 
@@ -68,19 +68,24 @@ def main() -> None:
     # HUC12 hops to the nearest downstream CWS surface intake (0 = is one; NA = none).
     rows["steps_to_sw_intake"] = rows["HUC12"].map(steps).astype("Int64")
     rows = rows.merge(
-        sw[["HUC12", "n_facilities", "n_systems", "cws_pop_served"]].rename(
+        sw[["HUC12", "n_facilities", "n_systems", "cws_pop_served", "pws_ids"]].rename(
             columns={"n_facilities": "n_sw_facilities", "n_systems": "n_sw_systems",
-                     "cws_pop_served": "cws_pop_served_sw"}),
+                     "cws_pop_served": "cws_pop_served_sw", "pws_ids": "pws_ids_sw"}),
         on="HUC12", how="left",
     ).merge(
-        gw[["HUC12", "n_facilities", "n_systems", "cws_pop_served"]].rename(
+        gw[["HUC12", "n_facilities", "n_systems", "cws_pop_served", "pws_ids"]].rename(
             columns={"n_facilities": "n_gw_facilities", "n_systems": "n_gw_systems",
-                     "cws_pop_served": "cws_pop_served_gw"}),
+                     "cws_pop_served": "cws_pop_served_gw", "pws_ids": "pws_ids_gw"}),
         on="HUC12", how="left",
     )
     for c in ("n_sw_facilities", "n_sw_systems", "cws_pop_served_sw",
               "n_gw_facilities", "n_gw_systems", "cws_pop_served_gw"):
         rows[c] = rows[c].fillna(0)
+    for c in ("pws_ids_sw", "pws_ids_gw"):
+        rows[c] = rows[c].fillna("")
+    # cws_pop_served (sw + gw, summed per HUC12) is fine as a per-HUC12 attribute, but
+    # is a per-system value repeated on every HUC12 that system touches — do not sum
+    # it across HUC12s (see the total below and utils.dedup_pop_served).
     rows["cws_pop_served"] = rows["cws_pop_served_sw"] + rows["cws_pop_served_gw"]
 
     out_path = OUT / "conflict_hucs.csv"
@@ -99,8 +104,10 @@ def main() -> None:
           f"I_sw {int(rows['in_I_sw'].sum())}, "
           f"U_sw-only {int((rows['in_U_sw'] & ~rows['in_I_sw']).sum())}, "
           f"I_gw {int(rows['in_I_gw'].sum())}")
-    print(f"  CWS population served by systems with intakes in the study area: "
-          f"{rows['cws_pop_served'].sum():,.0f}")
+    pop_lookup = pd.read_csv(OUT_INT / "cws_pwsid_population.csv").set_index("PWSID")["POPULATION_SERVED_COUNT"]
+    print(f"  CWS population served by systems with intakes in the study area "
+          f"(distinct systems, de-duplicated by PWSID): "
+          f"{dedup_pop_served(rows, pop_lookup):,.0f}")
     print("\nhops to the nearest downstream CWS surface intake (study HUC12s):")
     dist = rows["steps_to_sw_intake"].dropna()
     print("  distribution:", dist.value_counts().sort_index().to_dict())

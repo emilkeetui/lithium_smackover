@@ -169,3 +169,35 @@ already on disk from the sibling project (`temp_ne_data/`) — no `pygris`/Censu
 fetch, which is unavailable in this venv and which the plan explicitly avoids adding as
 a hard dependency. Three anchor towns (El Dorado, Magnolia, Camden) are labelled from
 hard-coded coordinates for reader orientation only.
+
+## HUC12 lithium concentration and bivariate maps (step 08)
+
+Step 08 works from the published USGS lithium *concentration* rasters (mg/L; Knierim
+et al. 2024) rather than from our tonnage calculation. The `p5`, `p50` and `p95`
+rasters are per-pixel percentiles across an ensemble of random-forest models whose
+error is within one standard error of the best model. They express **model-ensemble
+uncertainty**, not a statistical confidence interval.
+
+- **Cell → HUC12 assignment.** Each raster is read separately. Every valid 2 km cell
+  that overlaps a HUC12 (positive shared area, including partly covered border cells)
+  contributes its value with **equal weight**; there is no area weighting. A border cell
+  therefore counts toward each HUC12 it overlaps. Cells that only touch a boundary
+  (zero shared area) are dropped. Result: 4,336 cell–HUC12 pairs over the 141 analysis
+  HUC12s (1–66 cells each, median 32).
+- **Statistics.** For each raster, the **median** and **mean** of the HUC12's cells,
+  giving six values per HUC12 (p5/p50/p95 × median/mean). The ordering p5 ≤ p50 ≤ p95
+  holds for every HUC12 (asserted in the script).
+- **Bivariate classes.** Fixed and shared by all six maps so they are comparable. Li:
+  `< 100`, `100–200`, `≥ 200` mg/L (100 mg/L is the USGS threshold behind `qualunc`).
+  CWS population served: `0`, `1–1,000`, `> 1,000` (82 / 21 / 38 HUC12s). Breaks are the
+  constants `LI_CONC_BREAKS` and `POP_SERVED_BREAKS` in `code/utils.py`. Palette: Stevens
+  3×3 bivariate (Li grey→red, population served grey→blue).
+- **Double-counting caveat.** `cws_pop_served` is the *whole system's* population,
+  because SDWA reports it per system. A system with facilities in several HUC12s is
+  counted in each. It is valid as a per-HUC12 map attribute; **never sum it across
+  HUC12s** without first de-duplicating by PWSID.
+
+Outputs: `outputs/huc12_li_concentration.{gpkg,csv}`,
+`outputs/concentration_bivariate_summary.{csv,md}`,
+`outputs/bivariate/bivariate_{p5,p50,p95}_{median,mean}.png` and
+`outputs/bivariate/bivariate_panel.png`.

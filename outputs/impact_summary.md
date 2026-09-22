@@ -6,8 +6,10 @@ Of the **11.32 Mt** of median in-place lithium predicted in Smackover brines (p5
 
 | impact_tier   |   n_huc12 |   li_ton_p5_por20 |   li_ton_p50_por20 |   li_ton_p95_por20 |   li_area_km2 |   huc12_area_km2 |   population |   cws_pop_served |   li_ton_per_km2_mean |   pct_of_ton_p50 |   pct_of_area |
 |:--------------|----------:|------------------:|-------------------:|-------------------:|--------------:|-----------------:|-------------:|-----------------:|----------------------:|-----------------:|--------------:|
-| high          |        65 |       5.33656e+06 |        5.88742e+06 |        6.50644e+06 |       4847.15 |          6472.4  |     179373   |           198684 |               1058.64 |            52.02 |         48.01 |
+| high          |        65 |       5.33656e+06 |        5.88742e+06 |        6.50644e+06 |       4847.15 |          6472.4  |     179373   |            94768 |               1058.64 |            52.02 |         48.01 |
 | low           |        76 |       4.82267e+06 |        5.43067e+06 |        6.18728e+06 |       5248.85 |          7059.04 |      30282.5 |                0 |                917.66 |            47.98 |         51.99 |
+
+`cws_pop_served` above is the population served by the **distinct** CWS (de-duplicated by PWSID) with a facility in any HUC12 of that tier — a system with facilities in several same-tier HUC12s is counted once, not once per HUC12. Per-HUC12 `cws_pop_served` values elsewhere (the gpkg/csv and the concentration bivariate maps) are still per-system totals repeated on every HUC12 that system touches, and must not be summed across HUC12s directly.
 
 ## Porosity invariance (% of tonnage in 'high' tier, p50 grade)
 

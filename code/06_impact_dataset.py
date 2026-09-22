@@ -28,6 +28,7 @@ from utils import (
     UPSTREAM_K_SENSITIVITY,
     UPSTREAM_NEAR_K,
     assert_crs,
+    dedup_pop_served,
     ton_col,
     zpad_huc12,
 )
@@ -125,6 +126,8 @@ def main() -> None:
     for c in ("population", "pop_density", "cws_pop_served",
               "n_sw_facilities", "n_gw_facilities", "n_sw_systems", "n_gw_systems"):
         out[c] = out[c].fillna(0.0)
+    for c in ("pws_ids_sw", "pws_ids_gw"):
+        out[c] = out[c].fillna("")
     out["steps_to_sw_intake"] = out["steps_to_sw_intake"].astype("Int64")
 
     # --- classification ----------------------------------------------------------------
@@ -163,8 +166,13 @@ def main() -> None:
     print(f"in-place Li (p50/20%) carried onto HUC12s: {total:,.0f} t")
     print(f"lithium footprint area: {out['li_area_km2'].sum():,.0f} km2   "
           f"HUC12 area: {out['huc12_area_km2'].sum():,.0f} km2")
+    pop_lookup = pd.read_csv(
+        OUT_INT / "cws_pwsid_population.csv"
+    ).set_index("PWSID")["POPULATION_SERVED_COUNT"]
     print(f"resident population: {out['population'].sum():,.0f}   "
-          f"CWS population served: {out['cws_pop_served'].sum():,.0f}")
+          f"CWS population served (sum of per-HUC12 values; double-counts systems with "
+          f"facilities in >1 HUC12): {out['cws_pop_served'].sum():,.0f}   "
+          f"distinct systems (de-duplicated by PWSID): {dedup_pop_served(out, pop_lookup):,.0f}")
 
     print("\nscreens fired, over the analysis HUC12s (n, % of tonnage):")
     for col, label in REASON_FLAGS:

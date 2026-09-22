@@ -16,6 +16,7 @@ from __future__ import annotations
 from pathlib import Path
 
 import geopandas as gpd
+import pandas as pd
 from pyproj import CRS as _PyCRS
 
 # ---------------------------------------------------------------------------
@@ -120,6 +121,15 @@ UPSTREAM_NEAR_K = 2
 # degenerate, unlimited-propagation screen kept only as a diagnostic, not the headline).
 UPSTREAM_K_SENSITIVITY = (1, 2, 3, 5, 10, None)
 
+# --- Concentration x population-served bivariate maps (08_concentration_bivariate.py) ---
+# Fixed breaks, shared by all six maps (p5/p50/p95 x median/mean) so they are comparable.
+# Li classes: < 100 | 100-200 | >= 200 mg/L. 100 mg/L is the USGS threshold behind qualunc.
+LI_CONC_BREAKS = (100.0, 200.0)
+# Population served by CWS with a facility in the HUC12: 0 | 1-1,000 | > 1,000 people.
+# Most analysis HUC12s have no CWS facility at all, so 0 is its own class; 1,000 is
+# roughly the median among HUC12s that have one.
+POP_SERVED_BREAKS = (0.0, 1_000.0)
+
 # Primacy codes expected around the study area (sanity check only, never a filter).
 STUDY_PRIMACY_CODES = {"AR", "LA", "TX", "MS", "OK", "MO", "TN"}
 
@@ -193,3 +203,43 @@ def norm_tohuc(value) -> str:
     """Normalize a TOHUC value: zero-pad numeric codes, leave sink tokens alone."""
     s = str(value).strip() if value is not None else ""
     return zpad_huc12(s) if s.isdigit() else s
+
+
+# ---------------------------------------------------------------------------
+# CWS population-served de-duplication
+# ---------------------------------------------------------------------------
+# cws_pop_served is a per-SYSTEM attribute (SDWA reports it once per PWSID), attached
+# to every HUC12 that system has a facility in. A system with wells or intakes in
+# several HUC12s therefore carries its full population in EACH of those HUC12s' rows.
+# Summing cws_pop_served across HUC12s (e.g. by impact tier) double- or triple-counts
+# that system once per extra HUC12 it touches. The fix is to collect the distinct
+# PWSIDs referenced by the group (from the semicolon-joined pws_ids_sw/pws_ids_gw
+# columns 03_intake_hucs.py attaches to every HUC12) and add each system's population
+# exactly once, via a PWSID -> population lookup (outputs/intermediate/cws_pwsid_population.csv,
+# written by 03_intake_hucs.py from the SDWA system inventory, already one row per PWSID).
+def parse_pwsids(series: pd.Series) -> set:
+    """Union the semicolon-joined PWSID lists in a Series into one set of PWSIDs."""
+    ids: set = set()
+    for v in series.dropna():
+        if v:
+            ids.update(p for p in str(v).split(";") if p)
+    return ids
+
+
+def dedup_pop_served(
+    df: pd.DataFrame, pop_lookup: pd.Series, cols=("pws_ids_sw", "pws_ids_gw")
+) -> float:
+    """Total population served by the DISTINCT CWS referenced across df's HUC12 rows.
+
+    Each PWSID is counted once regardless of how many HUC12s in df it appears in.
+    `pop_lookup` is a PWSID-indexed Series of POPULATION_SERVED_COUNT (e.g. read from
+    cws_pwsid_population.csv). Never approximate this with `df["cws_pop_served"].sum()`
+    across more than one HUC12 — see the module-level note above.
+    """
+    ids: set = set()
+    for c in cols:
+        if c in df.columns:
+            ids |= parse_pwsids(df[c])
+    if not ids:
+        return 0.0
+    return float(pop_lookup.reindex(list(ids)).fillna(0.0).sum())

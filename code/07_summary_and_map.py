@@ -34,6 +34,7 @@ from utils import (
     UPSTREAM_K_SENSITIVITY,
     UPSTREAM_NEAR_K,
     assert_crs,
+    dedup_pop_served,
     to_albers,
     ton_col,
     zpad_huc12,
@@ -52,7 +53,7 @@ TIER_COLOR = {"high": "#d62728", "low": "#2ca02c"}
 # ---------------------------------------------------------------------------
 # Tables
 # ---------------------------------------------------------------------------
-def headline_table(df: pd.DataFrame) -> pd.DataFrame:
+def headline_table(df: pd.DataFrame, pop_lookup: pd.Series) -> pd.DataFrame:
     rows = []
     for tier, g in df.groupby("impact_tier"):
         rows.append({
@@ -64,7 +65,11 @@ def headline_table(df: pd.DataFrame) -> pd.DataFrame:
             "li_area_km2": g["li_area_km2"].sum(),
             "huc12_area_km2": g["huc12_area_km2"].sum(),
             "population": g["population"].sum(),
-            "cws_pop_served": g["cws_pop_served"].sum(),
+            # Distinct-system total, NOT g["cws_pop_served"].sum(): cws_pop_served is a
+            # per-system value repeated on every HUC12 that system touches, so summing
+            # it across the tier's HUC12s would double-count any system with facilities
+            # in more than one HUC12 of the same tier. See utils.dedup_pop_served.
+            "cws_pop_served": dedup_pop_served(g, pop_lookup),
             "li_ton_per_km2_mean": g["li_ton_per_km2"].mean(),
         })
     out = pd.DataFrame(rows).set_index("impact_tier")
@@ -189,7 +194,7 @@ def _add_landmarks(ax) -> None:
 def _load_states() -> gpd.GeoDataFrame:
     """State boundaries for map context, from a local Natural Earth file already on
     disk (no pygris / Census network fetch, per notes/implementation_plan.md §8)."""
-    states = gpd.read_file(NE_STATES_SHP, columns=["postal", "iso_a2", "geometry"])
+    states = gpd.read_file(NE_STATES_SHP, columns=["postal", "iso_a2", "name", "geometry"])
     states = states[(states["iso_a2"] == "US") & (states["postal"].isin(STUDY_PRIMACY_CODES))]
     return to_albers(states)
 
@@ -340,7 +345,10 @@ def main() -> None:
 
     print("=== 07_summary_and_map ===")
 
-    headline = headline_table(df)
+    pop_lookup = pd.read_csv(
+        OUT_INT / "cws_pwsid_population.csv"
+    ).set_index("PWSID")["POPULATION_SERVED_COUNT"]
+    headline = headline_table(df, pop_lookup)
     print("\nHeadline table (impact tier):")
     print(headline.round(2).to_string())
 
@@ -394,6 +402,14 @@ def main() -> None:
     md.append(headline_sentence + "\n")
     md.append("## Headline table (by impact tier)\n")
     md.append(headline.round(2).to_markdown() + "\n")
+    md.append(
+        "`cws_pop_served` above is the population served by the **distinct** CWS "
+        "(de-duplicated by PWSID) with a facility in any HUC12 of that tier — a system "
+        "with facilities in several same-tier HUC12s is counted once, not once per "
+        "HUC12. Per-HUC12 `cws_pop_served` values elsewhere (the gpkg/csv and the "
+        "concentration bivariate maps) are still per-system totals repeated on every "
+        "HUC12 that system touches, and must not be summed across HUC12s directly.\n"
+    )
     md.append("## Porosity invariance (% of tonnage in 'high' tier, p50 grade)\n")
     md.append(por_inv.round(3).to_markdown(index=False) + "\n")
     md.append("## Grade-percentile band (% of tonnage in 'high' tier, 20% porosity)\n")

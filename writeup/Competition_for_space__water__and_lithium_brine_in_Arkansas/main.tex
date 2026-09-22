@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{authblk} 
+\usepackage[
+backend=biber,
+style=authoryear,
+citestyle=bwl-FU
+]{biblatex}
+\addbibresource{citation.bib}
+
+\begin{document}
+
+\title{Competition for space, water, and lithium brine in Arkansas}
+
+\author[1]{Beia Spiller}
+\author[2]{Emil Kee-Tui}
+	\affil[1]{\small \emph{Resources for the Future}}
+	\affil[2]{\small \emph{Charles H. Dyson School of Applied Economics and Management, Cornell University}}
+
+\date{July 2026}
+\maketitle
+
+\section{Abstract}
+
+%The Smackover Formation in southern Arkansas is estimated to contain a significant share of US lithium deposits in brine. \cite{knierim2024evaluation} recently estimated that the formation's lithium reserves total 5.1 to 19 million tons, equivalent to 35\% to 136\% of previous estimates of US lithium reserves. These deposits are not currently extracted on a large scale, but extraction will increase in the near future to meet lithium demand and as US policymakers seek to secure domestic supply chains of critical minerals. This paper identifies which lithium brine locations have competing uses as water sources for water utilities and population centers. We present a map and an analysis of several environmental risks from extracting lithium from brine in the Smackover Formation.
+
+%The lithium would be extracted using a form of Direct Lithium Extraction (DLE), since Arkansas lacks the aridity required for evaporitic extraction. DLE is a broad group of techniques and new technologies whose impacts are largely unknown, as they have not been deployed at scale.
+
+%We measure the risk to drinking water resources by geospatially intersecting lithium brine raster data with a US hydrological watershed model, identifying locations by water risk and lithium content. We measure the size and location of Arkansan lithium brine reserves with raster data from \cite{knierim2024evaluation}, who estimate tons of lithium dissolved in brine using a machine-learning model trained on measured brine samples and geologic, geochemical, and temperature variables. We identify the watersheds containing drinking water utility intakes using EPA data.
+
+%We identify the size and density of the human population intersecting with brine locations, using ORNL LandScan Global 2024, a global raster at 1 km resolution in which each cell value is a 24-hour average population count.
+
+%Our results identify areas that are highly sensitive and where environmental impacts could have large negative human health consequences.
+
+The Smackover Formation in southern Arkansas is estimated to contain between 35\% and 136\% of previous estimates of U.S. lithium reserves \cite{knierim2024evaluation}. As policymakers seek to secure domestic supplies of critical minerals, development of these resources is expected to accelerate. Direct lithium extraction (DLE) is the favored technology in the region, yet it has not been commercialized at scale and its environmental impacts—particularly those related to water consumption and contamination—remain poorly understood \cite{malone2026geotechnical}. This paper identifies locations where future lithium extraction may pose elevated risks to drinking water resources in nearby populations.
+We assess these risks by spatially intersecting lithium brine resource estimates with hydrologic watershed boundaries, drinking water utility intake locations, and population data. Lithium reserve estimates are derived from the raster dataset developed by \cite{knierim2024evaluation}, which uses machine learning to predict dissolved lithium concentrations from brine samples and geologic characteristics. Drinking water intake locations are identified using U.S. Environmental Protection Agency data, while population exposure is measured using ORNL LandScan Global 2024 population estimates.
+
+This approach allows us to identify watersheds where high lithium resource potential coincides with drinking water infrastructure and concentrated populations. By jointly evaluating lithium resource abundance and potential exposure pathways, we highlight locations where contamination events or water-use conflicts could have the greatest consequences for human health and water security. Our findings offer an early screening framework for identifying environmentally sensitive areas within the Smackover Formation and provide information that can support siting decisions, regulatory oversight, and risk mitigation strategies as domestic lithium production expands.
+
+
+\printbibliography
+\end{document}

@@ -104,6 +104,19 @@ def main() -> None:
     sw_agg.to_csv(out_sw, index=False)
     gw_agg.to_csv(out_gw, index=False)
 
+    # PWSID -> population lookup, one row per distinct active CWS (`cws` is already
+    # deduplicated by PWSID above). Downstream steps use this plus the pws_ids_sw/gw
+    # columns above to add each system's population exactly once when summing
+    # cws_pop_served across more than one HUC12 (a system with facilities in several
+    # HUC12s must not be counted once per HUC12). See utils.dedup_pop_served.
+    # GW_SW_CODE is the system's own primary-source classification (independent of
+    # which HUC12s its facilities sit in) — carried through so 08 can tell a true
+    # groundwater utility from one that merely has a well on file for a system whose
+    # primary source is purchased/own surface water.
+    lookup_path = OUT_INT / "cws_pwsid_population.csv"
+    cws[["PWSID", "POPULATION_SERVED_COUNT", "GW_SW_CODE"]].to_csv(lookup_path, index=False)
+    print(f"Wrote PWSID->population lookup ({len(cws):,} distinct CWS) to {lookup_path}")
+
     print(f"\n|I_sw| = {len(sw_agg):,} HUC12s   |I_gw| = {len(gw_agg):,} HUC12s")
     print("Top 5 SW intake HUC12s by CWS population served:")
     print(sw_agg.head(5)[["HUC12", "n_facilities", "n_systems", "cws_pop_served"]].to_string(index=False))

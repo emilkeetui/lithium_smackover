@@ -36,6 +36,7 @@ STEPS: list[tuple[str, str, str]] = [
     ("05", "05_population_by_huc.py", "LandScan population per HUC12 (exactextract)"),
     ("06", "06_impact_dataset.py",    "Overlay cells x HUC12; apportion tonnage; classify impact tier"),
     ("07", "07_summary_and_map.py",   "Headline summary tables + map figures"),
+    ("08", "08_concentration_bivariate.py", "HUC12 Li concentration (p5/p50/p95 × median/mean) × CWS pop served bivariate maps"),
 ]
 
 
