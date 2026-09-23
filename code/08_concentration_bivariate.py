@@ -32,6 +32,11 @@ actually use, is per-HUC12 only and is not a system-level total.
 from __future__ import annotations
 
 import importlib
+import sys
+import textwrap
+
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")
 
 import geopandas as gpd
 import matplotlib.patheffects as path_effects
@@ -70,12 +75,41 @@ LI_LABELS = [
     f"{LI_CONC_BREAKS[0]:.0f}–{LI_CONC_BREAKS[1]:.0f}",
     f"≥ {LI_CONC_BREAKS[1]:.0f}",
 ]
-POP_LABELS = ["0", f"1–{POP_SERVED_BREAKS[1]:,.0f}", f"> {POP_SERVED_BREAKS[1]:,.0f}"]
+# Set in main() once the data's max population-served value is known — the top class
+# is open-ended ("5,001-max"), so its label depends on the actual data, not just the
+# fixed breaks.
+POP_LABELS: list[str] = []
 POP_COL = "gw_utility_pop_served"
+
+MAP_TITLE = (
+    "Predicted watershed brine lithium and size of population relying on "
+    "groundwater sourced drinking water utilities"
+)
+ORDINAL = {"p5": "5th", "p50": "50th", "p95": "95th"}
 
 
 def value_col(grade: str, stat: str) -> str:
     return f"Li_{grade}_{stat}_mgL"
+
+
+def panel_subtitle(grade: str, stat: str) -> str:
+    return f"{ORDINAL[grade]} percentile raster - {stat} of cells"
+
+
+def single_map_notes(grade: str, stat: str) -> str:
+    return (
+        f"Notes: Predicted brine lithium values present in the watershed is the "
+        f"{stat} {ORDINAL[grade]} percentile estimates of brine lithium cell values "
+        f"from Knierim et al. (2024) intersecting watershed boundaries. Watersheds "
+        f"are HUC12s."
+    )
+
+
+PANEL_NOTES = (
+    "Notes: Predicted brine lithium values present in the watershed is from "
+    "percentile estimates of brine lithium cell values from Knierim et al. (2024) "
+    "intersecting watershed boundaries."
+)
 
 
 def li_class(v: pd.Series) -> pd.Series:
@@ -214,12 +248,10 @@ def draw_bivariate(ax, df, col, huc12_study, study_area, states, title, fontsize
 
 def make_single_map(df, grade, stat, huc12_study, study_area, states, out_path) -> None:
     col = value_col(grade, stat)
-    fig, ax = plt.subplots(figsize=(10, 7.5))
-    draw_bivariate(
-        ax, df, col, huc12_study, study_area, states,
-        f"Predicted Smackover brine lithium ({grade} raster, {stat} of intersecting cells)\n"
-        "× population served by groundwater utilities with a well in the HUC12",
-    )
+    fig, ax = plt.subplots(figsize=(10, 7.7))
+    notes = "\n".join(textwrap.wrap(single_map_notes(grade, stat), width=100))
+    draw_bivariate(ax, df, col, huc12_study, study_area, states, notes, fontsize=7.5)
+    fig.suptitle(MAP_TITLE, fontsize=13, y=0.995)
     _legend_grid(fig, ax)
     ax.legend(
         handles=[
@@ -235,24 +267,22 @@ def make_single_map(df, grade, stat, huc12_study, study_area, states, out_path) 
         "EPA SDWIS 2022Q2 / SDWA 2024Q4",
         transform=ax.transAxes, ha="right", va="bottom", fontsize=6.5, color="#444",
     )
-    fig.tight_layout()
+    fig.tight_layout(rect=(0, 0, 1, 0.90))
     fig.savefig(out_path, dpi=150, bbox_inches="tight")
     plt.close(fig)
 
 
 def make_panel(df, huc12_study, study_area, states, out_path) -> None:
-    fig, axes = plt.subplots(2, 3, figsize=(18, 9.5))
+    fig, axes = plt.subplots(2, 3, figsize=(18, 9.7))
     for r, stat in enumerate(STATS):
         for c, grade in enumerate(GRADES):
             draw_bivariate(axes[r, c], df, value_col(grade, stat), huc12_study,
-                           study_area, states, f"{grade} raster — {stat} of cells", fontsize=11)
+                           study_area, states, panel_subtitle(grade, stat), fontsize=11)
     _legend_grid(fig, axes[0, 0], rotate_x=45)
-    fig.suptitle(
-        "Predicted Smackover brine lithium (mg/L) × population served by "
-        "groundwater utilities with a well in each HUC12",
-        fontsize=13,
-    )
-    fig.tight_layout()
+    fig.suptitle(MAP_TITLE, fontsize=15, y=0.998)
+    panel_notes = "\n".join(textwrap.wrap(PANEL_NOTES, width=160))
+    fig.text(0.5, 0.955, panel_notes, ha="center", va="top", fontsize=9, color="#333")
+    fig.tight_layout(rect=(0, 0, 1, 0.90))
     fig.savefig(out_path, dpi=150, bbox_inches="tight")
     plt.close(fig)
 
@@ -311,6 +341,12 @@ def main() -> None:
     gw_listed = set(p for ids in df["pws_ids_gw"].fillna("") for p in str(ids).split(";") if p)
     excluded = gw_listed - true_gw
     df[POP_COL] = gw_utility_pop_served(df["pws_ids_gw"], pop_by_pwsid, true_gw)
+
+    global POP_LABELS
+    lo, hi = POP_SERVED_BREAKS
+    pop_max = df[POP_COL].max()
+    POP_LABELS = [f"0–{lo:,.0f}", f"{lo + 1:,.0f}–{hi:,.0f}", f"{hi + 1:,.0f}–{pop_max:,.0f}"]
+
     print(f"\ngroundwater-listed utilities in the analysis HUC12s: {len(gw_listed)}   "
           f"excluded (GW_SW_CODE != 'GW', i.e. really surface-water sourced): {len(excluded)}")
     print(f"population served, groundwater utilities only: {df[POP_COL].sum():,.0f}   "

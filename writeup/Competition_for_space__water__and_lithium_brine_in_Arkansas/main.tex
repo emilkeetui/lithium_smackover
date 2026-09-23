@@ -37,6 +37,24 @@ We assess these risks by spatially intersecting lithium brine resource estimates
 
 This approach allows us to identify watersheds where high lithium resource potential coincides with drinking water infrastructure and concentrated populations. By jointly evaluating lithium resource abundance and potential exposure pathways, we highlight locations where contamination events or water-use conflicts could have the greatest consequences for human health and water security. Our findings offer an early screening framework for identifying environmentally sensitive areas within the Smackover Formation and provide information that can support siting decisions, regulatory oversight, and risk mitigation strategies as domestic lithium production expands.
 
+\section{Estimated brine lithium and drinking water utility customers}
+
+Figure \ref{fig:bivariate_p50_mean} maps each HUC12 watershed by a bivariate classification of predicted brine lithium concentration against the size of the population served by groundwater-sourced drinking water utilities with a well in that watershed. Lithium concentration is the mean, across each watershed's overlapping 2~km prediction cells, of the USGS median (50th percentile) predicted Li concentration raster \cite{knierim2024evaluation}.
 
 \printbibliography
+
+\clearpage
+\section*{Tables and Figures}
+\addcontentsline{toc}{section}{Tables and Figures}
+
+% ---------- Figures ----------
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{../../outputs/bivariate/bivariate_p50_mean.png}
+\caption{\raggedright Bivariate map of HUC12 watersheds by predicted Smackover Formation brine lithium concentration (mean across overlapping 2~km cells of the USGS 50th-percentile prediction raster) and the population served by groundwater-sourced community water systems with a well in the watershed.}
+\label{fig:bivariate_p50_mean}
+\end{figure}
+\clearpage
+
 \end{document}

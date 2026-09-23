@@ -50,6 +50,11 @@ CWS_XLSX = DATA / "cws_intake_hucs" / "PWS_Loctations_HUC12_A_I_2022Q2.xlsx"
 # EPA SDWA/ECHO bulk download (2024Q4) — supplies PWS_TYPE_CODE and POPULATION_SERVED_COUNT,
 # which the 2022Q2 HUC12 crosswalk lacks. Joined on PWSID; see notes/implementation_plan.md §4.
 SDWA_SYSTEMS_CSV = Path(r"Z:/ek559/sdwa_violations/SDWA_latest_downloads/SDWA_PUB_WATER_SYSTEMS.csv")
+# Violation/enforcement event log (2024Q4 vintage, same download batch as SDWA_SYSTEMS_CSV).
+# Used only by 09_violation_utility_tables.py for the MR/MCL/TT comparison table.
+SDWA_VIOLATIONS_PARQUET = Path(r"Z:/ek559/sdwa_violations/SDWA_latest_downloads/SDWA_VIOLATIONS_ENFORCEMENT.parquet")
+VIOLATION_CATEGORIES = ("MR", "MCL", "TT")
+VIOLATION_WINDOW_YEARS = 5
 LANDSCAN_TIF = DATA / "population_distribution" / "landscan-global-2024-assets" / "landscan-global-2024.tif"
 # Natural Earth state/province boundaries, already on disk from the sibling project —
 # used only for map context (07). No pygris / Census network fetch.
@@ -125,10 +130,9 @@ UPSTREAM_K_SENSITIVITY = (1, 2, 3, 5, 10, None)
 # Fixed breaks, shared by all six maps (p5/p50/p95 x median/mean) so they are comparable.
 # Li classes: < 100 | 100-200 | >= 200 mg/L. 100 mg/L is the USGS threshold behind qualunc.
 LI_CONC_BREAKS = (100.0, 200.0)
-# Population served by CWS with a facility in the HUC12: 0 | 1-1,000 | > 1,000 people.
-# Most analysis HUC12s have no CWS facility at all, so 0 is its own class; 1,000 is
-# roughly the median among HUC12s that have one.
-POP_SERVED_BREAKS = (0.0, 1_000.0)
+# Population served by groundwater utilities with a well in the HUC12:
+# 0-1,000 | 1,001-5,000 | 5,001-max people.
+POP_SERVED_BREAKS = (1_000.0, 5_000.0)
 
 # Primacy codes expected around the study area (sanity check only, never a filter).
 STUDY_PRIMACY_CODES = {"AR", "LA", "TX", "MS", "OK", "MO", "TN"}
