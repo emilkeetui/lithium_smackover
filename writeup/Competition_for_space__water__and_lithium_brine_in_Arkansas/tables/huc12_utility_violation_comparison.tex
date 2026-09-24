@@ -1,0 +1,27 @@
+\begin{table}[htbp]
+\centering
+\caption{MR, MCL, and TT violation incidence, last 5 years, groundwater utilities in the Smackover impact sample vs. rest of Arkansas}
+\label{tab:huc12_utility_violation_comparison}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lrrrr}
+\toprule
+ & \multicolumn{2}{c}{In impact sample} & & \\
+\cmidrule(lr){2-3}
+ & Yes & No & Diff. & $p$-value \\
+ & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} \\
+\hline
+Ever MR violation & 17.4\% & 15.3\% & 2.1\% & 0.718 \\
+Ever MCL violation & 10.9\% & 10.6\% & 0.3\% & 0.957 \\
+Ever TT violation & 13.0\% & 10.8\% & 2.3\% & 0.662 \\
+\hline
+Mean violations (indicator sum, 0-3) & 0.41 & 0.37 & 0.05 & 0.625 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\begin{minipage}{\linewidth}
+\vspace{4pt}
+\footnotesize
+\raggedright
+\textit{Notes:} Sample: active Arkansas community water systems (CWS; SDWA\_PUB\_WATER\_SYSTEMS.csv, 2024Q4, PRIMACY\_AGENCY\_CODE=='AR', PWS\_TYPE\_CODE=='CWS', PWS\_ACTIVITY\_CODE=='A', N=668). \textit{Yes} = the 46 groundwater-primary (GW\_SW\_CODE=='GW') CWS with a well in a Smackover-impact HUC12, i.e. the utilities whose population served drives the map \texttt{outputs/bivariate/bivariate\_p50\_mean.png} (67 raw PWSIDs listed in \texttt{pws\_ids\_gw} across the 141 analysis HUC12s; 21 excluded here as Louisiana/Texas systems or non-true-groundwater sources). \textit{No} = the remaining 622 active Arkansas CWS. MR violation: monitoring and reporting violation. MCL violation: maximum contaminant level violation. TT violation: treatment technique violation. Violation window: (2019-08-01, 2024-08-01], the 5 years ending at the latest COMPL\_PER\_BEGIN\_DATE among MR/MCL/TT violations for active Arkansas CWS (SDWA\_VIOLATIONS\_ENFORCEMENT.parquet, 2024Q4). A system with no violation record in the window is coded compliant (0) for that category. Mean violations (indicator sum, 0--3): sum of the three ever-violation indicators (MR, MCL, TT) per utility. Diff.\ stars from two-sample Welch $t$-test: *** $p<0.01$, ** $p<0.05$, * $p<0.1$.
+\end{minipage}
+\end{table}

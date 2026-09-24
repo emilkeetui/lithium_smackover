@@ -1,5 +1,9 @@
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
+\usepackage{booktabs}  % \toprule etc. in tables/
+\usepackage{array}     % p{} column specs in tables/
+\usepackage{adjustbox} % max-width wrapper in tables/
+\usepackage{float}     % [H] placement for end-of-document figures
 \usepackage{authblk} 
 \usepackage[
 backend=biber,
@@ -49,12 +53,19 @@ Figure \ref{fig:bivariate_p50_mean} maps each HUC12 watershed by a bivariate cla
 
 % ---------- Figures ----------
 
-\begin{figure}
+\begin{figure}[H] % [H]: keep below the "Tables and Figures" heading
 \centering
-\includegraphics[width=\linewidth]{../../outputs/bivariate/bivariate_p50_mean.png}
+\includegraphics[width=\linewidth]{figures/bivariate_p50_mean.png}
 \caption{\raggedright Bivariate map of HUC12 watersheds by predicted Smackover Formation brine lithium concentration (mean across overlapping 2~km cells of the USGS 50th-percentile prediction raster) and the population served by groundwater-sourced community water systems with a well in the watershed.}
 \label{fig:bivariate_p50_mean}
 \end{figure}
+\clearpage
+
+% ---------- Tables ----------
+
+\input{tables/huc12_sample_covariates.tex}
+
+\input{tables/huc12_utility_violation_comparison.tex}
 \clearpage
 
 \end{document}

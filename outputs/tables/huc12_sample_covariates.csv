@@ -1,6 +1,6 @@
 variable,column,mean,median,min,max
 Number of raster cells overlapping HUC12,n_cells,30.75177304964539,32.0,1.0,66.0
 HUC12 area (km$^2$),huc12_area_km2,95.96763918840892,95.63603105948098,45.98648159752891,183.52151990339271
-"Predicted brine Li, p5 (mg/L, mean of cells)",Li_p5_mean_mgL,87.57122141134751,78.034485,12.0,263.71738
-"Predicted brine Li, p50 (mg/L, mean of cells)",Li_p50_mean_mgL,97.86710940425533,86.548386,14.333333,287.8913
-"Predicted brine Li, p95 (mg/L, mean of cells)",Li_p95_mean_mgL,110.0878765460993,94.26923,20.666666,306.4565
+"HUC12 predicted brine Li, p5 (mg/L, mean of cells)",Li_p5_mean_mgL,87.57122141134751,78.034485,12.0,263.71738
+"HUC12 predicted brine Li, p50 (mg/L, mean of cells)",Li_p50_mean_mgL,97.86710940425533,86.548386,14.333333,287.8913
+"HUC12 predicted brine Li, p95 (mg/L, mean of cells)",Li_p95_mean_mgL,110.0878765460993,94.26923,20.666666,306.4565

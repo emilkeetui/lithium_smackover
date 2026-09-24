@@ -168,7 +168,7 @@ def build_violation_table() -> tuple[pd.DataFrame, str]:
 \\begin{{adjustbox}}{{max width=\\textwidth}}
 \\begin{{tabular}}{{lrrrr}}
 \\toprule
- & \\multicolumn{{2}}{{c}}{{Utility in bivariate\\_p50\\_mean.png sample}} & & \\\\
+ & \\multicolumn{{2}}{{c}}{{In impact sample}} & & \\\\
 \\cmidrule(lr){{2-3}}
  & Yes & No & Diff. & $p$-value \\\\
  & \\multicolumn{{1}}{{c}}{{(1)}} & \\multicolumn{{1}}{{c}}{{(2)}} & \\multicolumn{{1}}{{c}}{{(3)}} & \\multicolumn{{1}}{{c}}{{(4)}} \\\\
@@ -201,9 +201,9 @@ def build_covariate_table() -> tuple[pd.DataFrame, str]:
     specs = [
         ("n_cells", "Number of raster cells overlapping HUC12"),
         ("huc12_area_km2", "HUC12 area (km$^2$)"),
-        ("Li_p5_mean_mgL", "Predicted brine Li, p5 (mg/L, mean of cells)"),
-        ("Li_p50_mean_mgL", "Predicted brine Li, p50 (mg/L, mean of cells)"),
-        ("Li_p95_mean_mgL", "Predicted brine Li, p95 (mg/L, mean of cells)"),
+        ("Li_p5_mean_mgL", "HUC12 predicted brine Li, p5 (mg/L, mean of cells)"),
+        ("Li_p50_mean_mgL", "HUC12 predicted brine Li, p50 (mg/L, mean of cells)"),
+        ("Li_p95_mean_mgL", "HUC12 predicted brine Li, p95 (mg/L, mean of cells)"),
     ]
     rows = []
     for col, label in specs:
@@ -224,7 +224,7 @@ def build_covariate_table() -> tuple[pd.DataFrame, str]:
 \\caption{{Descriptive statistics, Smackover HUC12 impact sample}}
 \\label{{tab:huc12_sample_covariates}}
 \\small
-\\begin{{tabular}}{{>{{\\raggedright\\arraybackslash}}p{{6cm}} *{{4}}{{>{{\\centering\\arraybackslash}}p{{1.6cm}}}}}}
+\\begin{{tabular}}{{>{{\\raggedright\\arraybackslash}}p{{4.3cm}} *{{4}}{{>{{\\centering\\arraybackslash}}p{{1.4cm}}}}}}
 \\toprule
 \\textbf{{Variable}} & \\textbf{{Mean}} & \\textbf{{Median}} & \\textbf{{Min}} & \\textbf{{Max}} \\\\
 \\hline

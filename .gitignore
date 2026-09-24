@@ -16,6 +16,7 @@ writeup/*.log
 writeup/*.pdf
 writeup/*.zip
 writeup/**/*.aux
+writeup/**/*.pdf
 writeup/**/*.bcf
 writeup/**/*.blg
 writeup/**/*.bbl
