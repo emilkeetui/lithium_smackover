@@ -37,6 +37,24 @@ We assess these risks by spatially intersecting lithium brine resource estimates
 
 This approach allows us to identify watersheds where high lithium resource potential coincides with drinking water infrastructure and concentrated populations. By jointly evaluating lithium resource abundance and potential exposure pathways, we highlight locations where contamination events or water-use conflicts could have the greatest consequences for human health and water security. Our findings offer an early screening framework for identifying environmentally sensitive areas within the Smackover Formation and provide information that can support siting decisions, regulatory oversight, and risk mitigation strategies as domestic lithium production expands.
 
+\section{Data}
+
+\subsection{Lithium Concentration}
+
+\textcite{knierim2024evaluation} provides predicted lithium concentration data in mg/L in the lithium-bearing layer of rock 3,500–11,300 ft below the surface.  The rock layer is known as the Reynolds oolite unit and is 0–400 ft thick. The concentration data is based on brine samples from wells, and where samples were not taken, random forest machine learning was conducted on geological, geochemical, and temperature layers to predict lithium concentrations. These are rasterized into 2 km by 2 km cells. Model tuning produced variation in the estimates, so only estimates from models with an RMSE within one standard error of the best model's RMSE were kept. Each cell contains the lithium concentration estimates from the models with the fifth, fiftieth, and ninety fifth RMSE.
+
+\subsection{Drinking Water Utility Intakes}
+
+The EPA's Safe Drinking Water Information System (``SDWIS'') provides data on the universe of active utilities including their population served, whether they use groundwater or surface water, and the number of facilities each utility operates such as treatment facilities.
+
+Drinking water utilities are exposed to lithium brine extraction when they draw their water from the same groundwater source where a brine well is located. We identify the lithium brine concentration in groundwater sources which utilities in the SDWIS ECHO national dataset source water from using the NHDplus hydrological connectivity dataset. The NHDplus hydrological dataset identifies the boundaries and connectivity of watersheds across the US. We combine it with an EPA dataset on the watershed-level location of utility water intakes. 
+
+The NHDplus assigns watersheds a unique 2- to 12-digit code known as a hydrologic unit code (HUC). The number of digits corresponds to the size of the area covered by the watershed, with the geographical area decreasing with the number of digits; for example, the lower 48 US states are divided into 18 HUC02s and over 87,000 HUC12s (see Figure \ref{img:WBD_Base_HUStructure_small}). We use HUC12 watersheds to identify utility water intake locations. HUC12 watersheds are the smallest mapped watersheds available for the entire continental US and are small enough lithium brine extraction activities may impact the water in the HUC12 directly downstream. On average a HUC12 is 100 km$^2$.
+
+\section{Identifying population relying on a groundwater drinking water utility}
+
+We intersect the map of HUC12's with the lithium concentration raster
+
 
 \printbibliography
 \end{document}
