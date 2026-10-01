@@ -92,6 +92,15 @@ baked into the classifier as an unlimited constant.
    follow. Site-specific siting decisions need catchment- or parcel-level hydrology, not
    this screen.
 
+9. **Private-well population is a proxy.** It is LandScan *ambient* (not residential)
+   population outside mapped service areas, not a count of well users. 208 of the 481
+   service-area polygons are modeled (Random Forest / Decision Tree / Parcel) rather than
+   state-supplied, and rural water lines are under-drawn, so the measure over-states well
+   users where polygons under-cover real service. The lower-bound alternative B (7.5 % of
+   analysis-area population) and the headline C (16 %) bracket the share. Private wells
+   are not in SDWIS, so there is no HUC12-level validation. The service-area file is
+   national, so LA, TX and OK HUC12s are treated exactly like Arkansas ones.
+
 ## Recommended paper framing
 
 > Of the 11.3 Mt of median in-place lithium the USGS predicts in Smackover Formation

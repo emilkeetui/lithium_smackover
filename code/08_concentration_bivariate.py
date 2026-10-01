@@ -117,8 +117,8 @@ def li_class(v: pd.Series) -> pd.Series:
     return pd.Series(np.select([v < lo, v < hi], [0, 1], 2), index=v.index)
 
 
-def pop_class(v: pd.Series) -> pd.Series:
-    zero, hi = POP_SERVED_BREAKS
+def pop_class(v: pd.Series, breaks=None) -> pd.Series:
+    zero, hi = POP_SERVED_BREAKS if breaks is None else breaks
     return pd.Series(np.select([v <= zero, v <= hi], [0, 1], 2), index=v.index)
 
 
@@ -170,7 +170,12 @@ def summarize(pairs: pd.DataFrame) -> pd.DataFrame:
 
 
 # ---------------------------------------------------------------------------
-def _legend_grid(fig, ax, rotate_x: int = 0) -> None:
+Y_LABEL = "GW utility pop. served →"
+SOURCE = ("Li: USGS Knierim et al. 2024 | HUC12: USGS WBD | Utility (groundwater only): "
+          "EPA SDWIS 2022Q2 / SDWA 2024Q4")
+
+
+def _legend_grid(fig, ax, rotate_x: int = 0, pop_labels=None, y_label=None) -> None:
     """3x3 legend inset in the lower-left corner of ax."""
     inset = ax.inset_axes([0.03, 0.05, 0.16, 0.24])
     for p in range(3):
@@ -182,9 +187,10 @@ def _legend_grid(fig, ax, rotate_x: int = 0) -> None:
     inset.set_aspect("equal")
     inset.set_xticks([0.5, 1.5, 2.5], LI_LABELS, fontsize=6.5, rotation=rotate_x,
                      ha="right" if rotate_x else "center")
-    inset.set_yticks([0.5, 1.5, 2.5], POP_LABELS, fontsize=6.5)
+    inset.set_yticks([0.5, 1.5, 2.5], POP_LABELS if pop_labels is None else pop_labels,
+                     fontsize=6.5)
     inset.set_xlabel("Li in brine (mg/L) →", fontsize=7)
-    inset.set_ylabel("GW utility pop. served →", fontsize=7)
+    inset.set_ylabel(Y_LABEL if y_label is None else y_label, fontsize=7)
     inset.tick_params(length=0, pad=2)
     for s in inset.spines.values():
         s.set_visible(False)
@@ -237,22 +243,27 @@ def _base_context_gw(ax, huc12_study: gpd.GeoDataFrame, study_area: gpd.GeoDataF
     _add_state_labels(ax, states, avoid_xy=avoid_xy)
 
 
-def draw_bivariate(ax, df, col, huc12_study, study_area, states, title, fontsize=11) -> None:
+def draw_bivariate(ax, df, col, huc12_study, study_area, states, title, fontsize=11,
+                   pop_col=None, pop_breaks=None) -> None:
     _base_context_gw(ax, huc12_study, study_area, states)
-    colors = [BIVAR[p][li] for p, li in zip(pop_class(df[POP_COL]), li_class(df[col]))]
+    colors = [BIVAR[p][li] for p, li in
+              zip(pop_class(df[pop_col or POP_COL], pop_breaks), li_class(df[col]))]
     df.plot(ax=ax, color=colors, edgecolor="white", linewidth=0.3, zorder=3)
     _m07._add_landmarks(ax)
     ax.set_title(title, fontsize=fontsize)
     ax.set_axis_off()
 
 
-def make_single_map(df, grade, stat, huc12_study, study_area, states, out_path) -> None:
-    col = value_col(grade, stat)
+def make_single_map(df, grade, stat, huc12_study, study_area, states, out_path, *,
+                    col=None, pop_col=None, pop_breaks=None, pop_labels=None,
+                    y_label=None, title=None, notes=None, source=None) -> None:
+    col = col or value_col(grade, stat)
     fig, ax = plt.subplots(figsize=(10, 7.7))
-    notes = "\n".join(textwrap.wrap(single_map_notes(grade, stat), width=100))
-    draw_bivariate(ax, df, col, huc12_study, study_area, states, notes, fontsize=7.5)
-    fig.suptitle(MAP_TITLE, fontsize=13, y=0.995)
-    _legend_grid(fig, ax)
+    notes = "\n".join(textwrap.wrap(notes or single_map_notes(grade, stat), width=100))
+    draw_bivariate(ax, df, col, huc12_study, study_area, states, notes, fontsize=7.5,
+                   pop_col=pop_col, pop_breaks=pop_breaks)
+    fig.suptitle(title or MAP_TITLE, fontsize=13, y=0.995)
+    _legend_grid(fig, ax, pop_labels=pop_labels, y_label=y_label)
     ax.legend(
         handles=[
             Patch(edgecolor="#555555", facecolor="none", linestyle="--",
@@ -263,8 +274,7 @@ def make_single_map(df, grade, stat, huc12_study, study_area, states, out_path) 
     )
     ax.text(
         0.99, 0.01,
-        "Li: USGS Knierim et al. 2024 | HUC12: USGS WBD | Utility (groundwater only): "
-        "EPA SDWIS 2022Q2 / SDWA 2024Q4",
+        source or SOURCE,
         transform=ax.transAxes, ha="right", va="bottom", fontsize=6.5, color="#444",
     )
     fig.tight_layout(rect=(0, 0, 1, 0.90))

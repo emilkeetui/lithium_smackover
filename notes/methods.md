@@ -201,3 +201,37 @@ Outputs: `outputs/huc12_li_concentration.{gpkg,csv}`,
 `outputs/concentration_bivariate_summary.{csv,md}`,
 `outputs/bivariate/bivariate_{p5,p50,p95}_{median,mean}.png` and
 `outputs/bivariate/bivariate_panel.png`.
+
+## Private-well population (step 10)
+
+Private wells are not in SDWIS, so the population relying on them is inferred. For each
+HUC12 we define **private-well population = LandScan 2024 population living outside every
+mapped community-water-system service area** (EPA CWS Service Area Boundaries v1, created
+2024-06; 481 polygons intersect the 471 study HUC12s, no duplicate PWSIDs). Formally
+`C = LS(h) − LS(h ∩ ∪ SA)`, where `LS` is the LandScan sum over a polygon.
+
+Two alternatives that subtract the utilities' *reported* served population were tested
+and rejected as headline measures:
+
+- **A** (`pop_h − Σ pop_i · area(i∩h)/area(i)`): 92 of 141 analysis HUC12s go negative.
+- **B** (same, apportioned by LandScan share instead of area): 81 of 141 go negative.
+
+Both fail because reported served population is inflated relative to what the drawn
+polygons contain: the median service area reports **2.3×** the LandScan population inside
+its polygon (Texarkana Water Utilities reports 67,267 people against 34,004 inside its
+polygon, plausibly because the count includes the Texas side). Spreading that count by
+area pushes city customers onto empty fringe HUC12s. A and B are kept in
+`outputs/huc12_private_wells.csv` and the summary as a sensitivity band (B is the low
+bound); C is the map variable. Floored sums over the 141 analysis HUC12s: A 53.4 k
+(25.5 %), B 15.6 k (7.5 %), **C 33.6 k (16.0 %)**.
+
+Geometry handling: service areas (EPSG:3857) are reprojected to `CRS_ALBERS` and made
+valid before any area is computed. Population uses `exactextract` on the native
+EPSG:4326 LandScan raster with polygons reprojected into 4326; the raster is never warped.
+Vintages: LandScan 2024; service areas v1 (2024-06); the SDWIS/SDWA layers elsewhere in
+this pipeline are 2022Q2/2024Q4. Map classes (`PRIVATE_WELL_BREAKS` = 75 / 200 people)
+are near-terciles across the analysis HUC12s (50 / 45 / 46 HUC12s).
+
+Outputs: `outputs/huc12_private_wells.{gpkg,csv}`, `outputs/private_wells_summary.{csv,md}`,
+`outputs/bivariate/bivariate_p50_mean_private_wells.png`,
+`outputs/bivariate/private_wells_class_counts.csv`.

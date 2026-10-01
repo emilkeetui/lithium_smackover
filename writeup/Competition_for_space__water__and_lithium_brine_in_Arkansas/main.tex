@@ -63,6 +63,10 @@ We intersect the map of HUC12's with the lithium concentration raster
 
 Figure \ref{fig:bivariate_p50_mean} maps each HUC12 watershed by a bivariate classification of predicted brine lithium concentration against the size of the population served by groundwater-sourced drinking water utilities with a well in that watershed. Lithium concentration is the mean, across each watershed's overlapping 2~km prediction cells, of the USGS median (50th percentile) predicted Li concentration raster \cite{knierim2024evaluation}.
 
+Figure \ref{fig:bivariate_p50_mean_private_wells} repeats the classification using the population relying on private wells in place of utility customers. Private wells are not recorded in SDWIS, so we proxy this population as the LandScan 2024 population living outside every mapped community water system service area (EPA CWS Service Area Boundaries v1) in the watershed.
+
+Figure \ref{fig:bivariate_p50_mean_density} repeats the classification using the residential population density of each watershed in place of drinking water users: the LandScan 2024 population in the watershed divided by its area. Density is grouped into fewer than 5, 5--25, and 25 or more people per km$^2$; 25 people per km$^2$ is close to the Arkansas statewide average.
+
 \printbibliography
 
 \clearpage
@@ -76,6 +80,22 @@ Figure \ref{fig:bivariate_p50_mean} maps each HUC12 watershed by a bivariate cla
 \includegraphics[width=\linewidth]{figures/bivariate_p50_mean.png}
 \caption{\raggedright Bivariate map of HUC12 watersheds by predicted Smackover Formation brine lithium concentration (mean across overlapping 2~km cells of the USGS 50th-percentile prediction raster) and the population served by groundwater-sourced community water systems with a well in the watershed.}
 \label{fig:bivariate_p50_mean}
+\end{figure}
+\clearpage
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{figures/bivariate_p50_mean_private_wells.png}
+\caption{\raggedright Bivariate map of HUC12 watersheds by predicted Smackover Formation brine lithium concentration (mean across overlapping 2~km cells of the USGS 50th-percentile prediction raster) and the estimated population relying on private wells, measured as LandScan 2024 population living outside every mapped community water system service area.}
+\label{fig:bivariate_p50_mean_private_wells}
+\end{figure}
+\clearpage
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{figures/bivariate_density_p50_mean.png}
+\caption{\raggedright Bivariate map of HUC12 watersheds by predicted Smackover Formation brine lithium concentration (mean across overlapping 2~km cells of the USGS 50th-percentile prediction raster) and population density, measured as LandScan 2024 population in the watershed divided by watershed area (people per km$^2$).}
+\label{fig:bivariate_p50_mean_density}
 \end{figure}
 \clearpage
 

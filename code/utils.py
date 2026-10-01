@@ -133,6 +133,15 @@ LI_CONC_BREAKS = (100.0, 200.0)
 # Population served by groundwater utilities with a well in the HUC12:
 # 0-1,000 | 1,001-5,000 | 5,001-max people.
 POP_SERVED_BREAKS = (1_000.0, 5_000.0)
+# Population density (LandScan 2024 residents / HUC12 Albers km²) for 11_density_bivariate.py:
+# < 5 | 5–25 | >= 25 people/km². 25 ≈ Arkansas statewide density (~22/km²), so the top class
+# is "at or above state-average density"; 5 splits sparse rural from small-town watersheds.
+POP_DENSITY_BREAKS = (5.0, 25.0)
+# Private-well population (10_private_wells.py): 0-75 | 76-200 | 201-max people.
+PRIVATE_WELL_BREAKS = (75.0, 200.0)
+
+# EPA Community Water System service-area boundaries v1 (EPSG:3857), created 2024-06.
+SERVICE_AREA_SHP = Path(r"Z:/ek559/mining_wq/raw_data/CWS_Boundaries_Latest/EPA_CWS_V1/EPA_CWS_V1.shp")
 
 # Primacy codes expected around the study area (sanity check only, never a filter).
 STUDY_PRIMACY_CODES = {"AR", "LA", "TX", "MS", "OK", "MO", "TN"}

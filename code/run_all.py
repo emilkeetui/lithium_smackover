@@ -37,6 +37,9 @@ STEPS: list[tuple[str, str, str]] = [
     ("06", "06_impact_dataset.py",    "Overlay cells x HUC12; apportion tonnage; classify impact tier"),
     ("07", "07_summary_and_map.py",   "Headline summary tables + map figures"),
     ("08", "08_concentration_bivariate.py", "HUC12 Li concentration (p5/p50/p95 × median/mean) × CWS pop served bivariate maps"),
+    ("09", "09_violation_utility_tables.py", "SDWA violation / utility comparison tables"),
+    ("10", "10_private_wells.py",     "Private-well population per HUC12 (outside CWS service areas) + Li bivariate map"),
+    ("11", "11_density_bivariate.py", "HUC12 Li concentration × LandScan population density bivariate maps"),
 ]
 
 
